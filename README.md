@@ -26,6 +26,9 @@ Pour la maquette figma, nous avons utilisé **Dribbble** pour trouver de l'inspi
 - **Sources :**
   - [Dribbble](https://dribbble.com)
 
+Pour visualiser la maquette figma, je vous invite à consulter le lien ci dessous: </br>
+[Notre maquette figma]()
+
 ## III. Programmation
 
 ### A. Architecture du projet
