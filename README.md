@@ -17,13 +17,14 @@ Vous pourrez trouver les consignes sur le lien suivant, attention site potentiel
 
 ## II. Maquette figma
 
+Pour la maquette figma, nous avons utilisé **Dribbble** pour trouver de l'inspiration et nous nous sommes orientés sur les idées suivantes :
+
 - **Idées :**
   - Site e-commerce
   - Style bento-grid
   - Lego dinosaure
 - **Sources :**
   - [Dribbble](https://dribbble.com)
-  - [Lego dinosaure](https://www.lego.com/fr-fr/themes/jurassic-world?filters.i0.key=categories.id&filters.i0.values.i0=ab2618af-0e1a-415d-a561-ddc7bd8f3e89)
 
 ## III. Programmation
 
@@ -32,6 +33,7 @@ Vous pourrez trouver les consignes sur le lien suivant, attention site potentiel
 ```bash
     . TPWeb
     └── assets/
+    |     └── flavicon.ico
     └── index.html
     └── main.js
     └── style.css
