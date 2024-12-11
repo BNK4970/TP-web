@@ -7,6 +7,7 @@ Les titulaires des droits d'auteur sont : CORDOVANA Enzo & PANAIVA Jérémi.
 - Vous êtes libre de copier, distribuer et modifier cette œuvre, à condition que :
   - Les créateurs originaux soient crédités de manière claire (nom, lien vers l'œuvre originale, etc.).
   - Toute modification ou dérivée respecte les mêmes termes de cette licence.
+- Si des groupes participent à ce travail pratique (TP), ils acceptent une réduction de **3 points** sur leur évaluation global en cas d'utilisation de cette oeuvre, en plus de l(obligation de parta des revenus mentionnée dans la section 3. 
 
 ## 2. Utilisation commerciale
 - L'utilisation commerciale de cette œuvre ou de ses dérivées est permise, **sous réserve du partage des revenus** conformément à la section 3.
