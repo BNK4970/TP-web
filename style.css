@@ -1,10 +1,6 @@
-:root{
-    --background : #1a1a1a ;
-
-
+:root {
+   --background: #1a1a1a;
 }
-
-
 
 * {
    margin: 0;
@@ -59,28 +55,49 @@ main {
       background-size: cover;
       background-position: center;
    }
-   h1{
-    background: var(--background);
-    color: #ffffff;
-    padding: 10px 20px;
-    text-align: center;
+   h1 {
+      background: var(--background);
+      color: #ffffff;
+      padding: 10px 20px;
+      text-align: center;
+   } 
+   h3 {
+      color: #ffffff;
+      padding: 10px 20px;
+      text-align: center;
    }
-   h2{
-    background: var(--background);
-    color: #ffffff;
-    padding: 10px 20px;
-    text-align: center;
-   }
-   #NotreHistoire{
-    background-color:#343434;
-    p{
+   #NotreHistoire {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,auto) 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+      background-color: #343434;
+      p {
+         color: #ffffff;
+         text-align: center;
+         grid-column-start: 2 ;
+         grid-row-start: 3;
+      }
+      h2{
+        column-span: all;
+        grid-row-start: 1;
+        background: var(--background);
         color: #ffffff;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+        padding: 10px 20px;
+        text-align: center;
+      }
+      h3{
+        grid-column-start: 2;
+        grid-row-start: 2;
 
+      }
+      img {
+        grid-row-start:2 ;
+        grid-row-end:4 ;
+        width: 100%;
 
-
-
+      }
    }
 }
 
