@@ -9,6 +9,11 @@
    padding: 0;
    box-sizing: border-box;
 }
+html{
+
+   scroll-padding-top: 70px;
+   scroll-behavior:smooth;
+}
 
 body {
    font-family: Arial, sans-serif;
@@ -16,7 +21,7 @@ body {
    min-height: 100dvh;
 }
 h1 {/*texte avec fond noir */
-   background: var(--background);
+   background: #343434;
    color: #ffffff;
    padding: 10px 20px;
    text-align: center;
@@ -31,6 +36,7 @@ header {
    align-items: center;
    position: fixed;
    width: 100%;
+   transition: transform 0.3s ease;
    nav ul {
       justify-content: center;
       list-style: none;
@@ -47,12 +53,23 @@ header {
             border-radius: 5px;
          }
       }
+      a {
+         text-decoration: none; /* Supprime le soulignement */
+         color: inherit; /* Hérite de la couleur du texte par défaut */
+     }
+
    }
    p {
       font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: 2px;
+      a {
+         text-decoration: none; /* Supprime le soulignement */
+         color: inherit; /* Hérite de la couleur du texte par défaut */
+     }
    }
+
+  
 }
 main {   
    section {
@@ -88,18 +105,13 @@ main {
       background-color: #202938;
 
    }
-         
-
-
-
-
-   #NotreHistoire {
+   #Histoire {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2,auto) 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-   background-color: #343434;
+   background-color: #695d5d;
       }
       h1{
         grid-column: 1/span 2;
@@ -118,8 +130,8 @@ main {
       img {
         grid-row-start:2 ;
         grid-row-end:4 ;
-        width: 100%;
-        height: 100%;
+        width: 50%;
+        height: 50%;
         margin: 10px,10px;
 
       }
