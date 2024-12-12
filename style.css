@@ -72,15 +72,10 @@ main {
     grid-template-rows: repeat(2,auto) 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-      background-color: #343434;
-      p {
-         color: #ffffff;
-         text-align: center;
-         grid-column-start: 2 ;
-         grid-row-start: 3;
+   background-color: #343434;
       }
       h2{
-        column-span: all;
+        grid-column: 1/span 2;
         grid-row-start: 1;
         background: var(--background);
         color: #ffffff;
@@ -98,6 +93,14 @@ main {
         width: 100%;
 
       }
+      p {
+         color: #ffffff;
+         text-align: center;
+         grid-column-start: 2 ;
+         grid-row-start: 3;
+         justify-content: center; 
+         align-items: center; 
+         height: 100%;
    }
 }
 
