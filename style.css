@@ -28,6 +28,7 @@ header {
       display: flex;
       gap: 15px;
       li {
+         font-size: 2rem;
          padding: 10px 15px;
          cursor: pointer;
          transition: background-color 0.3s ease, color 0.3s ease;
@@ -44,22 +45,37 @@ header {
       letter-spacing: 2px;
    }
 }
-main {
+main {   
    section {
       width: 100%;
       height: 100dvh;
+      
    }
    #hero {
       background-image: url(./assets/fondhero.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      display: flex;
+      justify-content: center; /* Centrage horizontal */
+      align-items: center; /* Centrage vertical */
+      color: #e3d3ab; /* Couleur du texte */
+      font-size: 10rem; /* Taille du texte */
+      font-weight: bold;
+      text-shadow: 4px 4px 4px var(--background);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+      p{
+         display: flex;
+         justify-content: center; /* Centrage horizontal */
+         align-items: center; /* Centrage vertical */
+      }
    }
-   h1 {
+   h1 {/*texte avec fond noir */
       background: var(--background);
       color: #ffffff;
       padding: 10px 20px;
       text-align: center;
+      font-size: 5rem;
    } 
    h3 {
       color: #ffffff;
@@ -74,13 +90,9 @@ main {
     grid-row-gap: 0px;
    background-color: #343434;
       }
-      h2{
+      h1{
         grid-column: 1/span 2;
-        grid-row-start: 1;
-        background: var(--background);
-        color: #ffffff;
-        padding: 10px 20px;
-        text-align: center;
+        grid-row-start: 1; 
       }
       h3{
         grid-column-start: 2;
@@ -91,6 +103,8 @@ main {
         grid-row-start:2 ;
         grid-row-end:4 ;
         width: 100%;
+        height: 100%;
+        margin: 10px,10px;
 
       }
       p {
@@ -98,10 +112,11 @@ main {
          text-align: center;
          grid-column-start: 2 ;
          grid-row-start: 3;
-         justify-content: center; 
-         align-items: center; 
+         justify-content:left ; 
+         align-items: baseline; 
          height: 100%;
-   }
+      }
+
 }
 
 footer {
@@ -115,6 +130,7 @@ footer {
       display: flex;
       gap: 15px;
       li {
+         font-size: 2rem;
          padding: 10px 15px;
          cursor: pointer;
          transition: background-color 0.3s ease, color 0.3s ease;

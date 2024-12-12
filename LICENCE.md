@@ -1,7 +1,7 @@
 # Licence de Partage des Revenus (Revenue-Sharing License)
 
 Cette licence régit l'utilisation de l'œuvre suivante : [Nom de l'œuvre].  
-Les titulaires des droits d'auteur sont : **CORDOVANA Enzo** & **PANAIVA Jérémi**.
+Les titulaires des droits d'auteur sont : **CORDOVANA Enzo** & **PANAIVA Jérémy**.
 
 ## 1. Permissions
 - Vous êtes libre de copier, distribuer et modifier cette œuvre, à condition que :
