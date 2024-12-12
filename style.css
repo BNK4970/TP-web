@@ -1,5 +1,7 @@
 :root {
    --background: #1a1a1a;
+   --jaune: #e3d3ab ;
+   --bleu: #202938 ;
 }
 
 * {
@@ -12,6 +14,13 @@ body {
    font-family: Arial, sans-serif;
    width: 100%;
    min-height: 100dvh;
+}
+h1 {/*texte avec fond noir */
+   background: var(--background);
+   color: #ffffff;
+   padding: 10px 20px;
+   text-align: center;
+   font-size: 5rem;
 }
 header {
    background-color: var(--background);
@@ -70,18 +79,8 @@ main {
          align-items: center; /* Centrage vertical */
       }
    }
-   h1 {/*texte avec fond noir */
-      background: var(--background);
-      color: #ffffff;
-      padding: 10px 20px;
-      text-align: center;
-      font-size: 5rem;
-   } 
-   h3 {
-      color: #ffffff;
-      padding: 10px 20px;
-      text-align: center;
-   }
+
+
    #NotreHistoire {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -97,6 +96,11 @@ main {
       h3{
         grid-column-start: 2;
         grid-row-start: 2;
+         color: #ffffff;
+         padding: 10px 20px;
+         text-align: center;
+         font-size: 2rem ;
+      
 
       }
       img {
@@ -115,6 +119,7 @@ main {
          justify-content:left ; 
          align-items: baseline; 
          height: 100%;
+         font-size: 1.4rem ;
       }
 
 }
