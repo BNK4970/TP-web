@@ -57,7 +57,7 @@ header {
 main {   
    section {
       width: 100%;
-      height: 100dvh;
+      height: 100vh;
       
    }
    #hero {
@@ -79,6 +79,18 @@ main {
          align-items: center; /* Centrage vertical */
       }
    }
+   #Menu {
+      background-image: url(./assets/menu.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100% auto;
+      background-position: center;
+      background-color: #202938;
+
+   }
+         
+
+
 
 
    #NotreHistoire {
