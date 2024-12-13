@@ -49,6 +49,9 @@
       }
     }
 }
+body{
+    background-color:var(--bleu);
+}
 section {
     width: 100%;
     height: 100vh;
@@ -59,53 +62,52 @@ section {
     color: var(--jaune);
     padding: 20px;
     margin: 50px auto;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 35%;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
  }
+ #reservation{
  
- #reservation h1 {
+    h1 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: var(--jaune);
  }
  
- #reservation form {
+ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
  }
  
- #reservation label {
+ label {
     font-size: 1rem;
     color: var(--jaune);
  }
  
- #reservation input,
- #reservation textarea,
- #reservation button {
+ input,
+ textarea,
+ button {
     font-size: 1rem;
     padding: 10px;
     border: 2px solid var(--bleu);
     border-radius: 5px;
     background-color: var(--background);
     color: var(--jaune);
-    outline: none;
-    transition: all 0.3s ease;
  }
  
- #reservation input:focus,
- #reservation textarea:focus {
+ input:focus,
+ textarea:focus {
     border-color: var(--jaune);
  }
  
- #reservation textarea {
+ textarea {
     resize: none;
  }
  
- #reservation button {
+ button {
     background-color: var(--bleu);
     border: none;
     color: var(--jaune);
@@ -113,17 +115,17 @@ section {
     font-weight: bold;
  }
  
- #reservation button:hover {
+  button:hover {
     background-color: var(--jaune);
     color: var(--background);
  }
- 
+}
  
 footer {
     background-color: #1a1a1a;
     color: #ffffff;
-    padding: 10px 20px;
     text-align: center;
+    padding: 20px ;
     nav ul {
        justify-content: center;
        list-style: none;
