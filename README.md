@@ -20,9 +20,8 @@ Vous pourrez trouver les consignes sur le lien suivant, attention site potentiel
 Pour la maquette figma, nous avons utilisé **Dribbble** pour trouver de l'inspiration et nous nous sommes orientés sur les idées suivantes :
 
 - **Idées :**
-  - Site e-commerce
-  - Style bento-grid
-  - Lego dinosaure
+  - Restaurant gastronomique
+  - Provencal
 - **Sources :**
   - [Dribbble](https://dribbble.com)
 
@@ -30,7 +29,7 @@ Pour visualiser la maquette figma, je vous invite à consulter le lien ci dessou
 [Notre maquette figma]()
 
 ## III. Programmation
-
+Pour la programmation de notre site web, nous utilisons `HTML` & `css`. Le code est disponible dans le repo et hébergé grâce à github, vous pouvez consulter le site web via le lien dans la description.
 ### A. Architecture du projet
 
 ```bash
