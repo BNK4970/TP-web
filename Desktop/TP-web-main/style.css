@@ -4,15 +4,13 @@
    --bleu: #202938 ;
 }
 
-
-
 * {
    margin: 0;
    padding: 0;
-  
-}
-html{
 
+}
+/* test html */
+html{
    scroll-padding-top: 70px;
    scroll-behavior:smooth;
 }
