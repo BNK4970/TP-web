@@ -1,0 +1,152 @@
+:root {
+    --background: #1a1a1a;
+    --jaune: #e3d3ab;
+    --bleu: #202938;
+ }
+ *{
+   
+   
+   margin: 0;
+   padding: 0;
+ }
+ html{
+
+    scroll-padding-top: 70px;
+    scroll-behavior:smooth;
+ }
+ header {
+    background-color: var(--background);
+    color: #ffffff;
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+    nav ul {
+       justify-content: center;
+       list-style: none;
+       display: flex;
+       gap: 15px;
+       li {
+          font-size: 2rem;
+          padding: 10px 15px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, color 0.3s ease;
+          &:hover {
+             background-color: #ffffff;
+             color: #1a1a1a;
+             border-radius: 5px;
+          }
+       }
+       a {
+          text-decoration: none; /* Supprime le soulignement */
+          color: inherit; /* Hérite de la couleur du texte par défaut */
+      }
+ 
+    }
+    p {
+       font-size: 1.5rem;
+       font-weight: bold;
+       letter-spacing: 2px;
+       padding: 10px ;
+       a {
+          text-decoration: none; /* Supprime le soulignement */
+          color: inherit; /* Hérite de la couleur du texte par défaut */
+      }
+    }
+}
+body{
+    background-color:var(--bleu);
+}
+
+ #reservation {
+    background-color: var(--background);
+    color: var(--jaune);
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 35%;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    height: 100%;
+ }
+ #reservation{
+ 
+    h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--jaune);
+ }
+ 
+ form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+ }
+ 
+ label {
+    font-size: 1rem;
+    color: var(--jaune);
+ }
+ 
+ input,
+ textarea,
+ button {
+    font-size: 1rem;
+    padding: 10px;
+    border: 2px solid var(--bleu);
+    border-radius: 5px;
+    background-color: var(--background);
+    color: var(--jaune);
+ }
+ 
+ input:focus,
+ textarea:focus {
+    border-color: var(--jaune);
+ }
+ 
+ textarea {
+    resize: none;
+ }
+ 
+ button {
+    background-color: var(--bleu);
+    border: none;
+    color: var(--jaune);
+    cursor: pointer;
+    font-weight: bold;
+ }
+ 
+  button:hover {
+    background-color: var(--jaune);
+    color: var(--background);
+ }
+}
+ 
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px ;
+    nav ul {
+       justify-content: center;
+       list-style: none;
+       display: flex;
+       gap: 15px;
+       li {
+          font-size: 2rem;
+          padding: 10px 15px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, color 0.3s ease;
+          &:hover {
+             background-color: #ffffff;
+             color: #1a1a1a;
+             border-radius: 5px;
+            }
+            a{text-decoration: none; /* Supprime le soulignement */
+                color: inherit; /* Hérite de la couleur du texte par défaut */
+               }
+        }
+    }
+} 
