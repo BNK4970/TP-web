@@ -3,6 +3,8 @@
    --jaune: #e3d3ab ;
    --bleu: #202938 ;
 }
+@media ()
+
 
 * {
    margin: 0;
@@ -169,4 +171,27 @@ footer {
          }
       }
    }
+}
+
+
+/* Media query pour les écrans de moins de 768px (tablettes et mobiles) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Media query pour les écrans de moins de 480px (mobiles) */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 5px;
+  }
 }
