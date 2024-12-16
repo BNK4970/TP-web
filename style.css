@@ -20,7 +20,6 @@ html{
 body {
    font-family: Arial, sans-serif;
    width: 100%;
-   min-height: 100dvh;
 }
 h1 {/*texte avec fond noir */
    background: #343434;
