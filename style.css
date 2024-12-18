@@ -1,27 +1,27 @@
 :root {
    --background: #1a1a1a;
-   --jaune: #e3d3ab ;
-   --bleu: #202938 ;
+   --jaune: #e3d3ab;
+   --bleu: #202938;
 }
 
 * {
    margin: 0;
    padding: 0;
-
+   /* box-shadow: 0 0 0 3px red inset; */
 }
 /* test html */
-html{
+html {
    scroll-padding-top: 70px;
-   scroll-behavior:smooth;
+   scroll-behavior: smooth;
 }
 
 body {
    font-family: Arial, sans-serif;
    width: 100%;
 }
-h1 {/*texte avec fond noir */
-   background: #343434;
-   color: #ffffff;
+h1 {
+   /*texte avec fond noir */
+   color: #000000;
    padding: 10px 20px;
    text-align: center;
    font-size: 5rem;
@@ -36,6 +36,7 @@ header {
    position: fixed;
    width: 100%;
    transition: transform 0.3s ease;
+   z-index: 999;
    nav ul {
       justify-content: center;
       list-style: none;
@@ -55,8 +56,7 @@ header {
       a {
          text-decoration: none; /* Supprime le soulignement */
          color: inherit; /* Hérite de la couleur du texte par défaut */
-     }
-
+      }
    }
    p {
       font-size: 1.5rem;
@@ -65,16 +65,13 @@ header {
       a {
          text-decoration: none; /* Supprime le soulignement */
          color: inherit; /* Hérite de la couleur du texte par défaut */
-     }
+      }
    }
-
-  
 }
-main {   
+main {
    section {
       width: 100%;
       height: 100vh;
-      
    }
    #hero {
       background-image: url(./assets/fondhero.jpg);
@@ -88,107 +85,153 @@ main {
       font-size: 10rem; /* Taille du texte */
       font-weight: bold;
       text-shadow: 4px 4px 4px var(--background);
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-      p{
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      p {
          display: flex;
          justify-content: center; /* Centrage horizontal */
          align-items: center; /* Centrage vertical */
       }
    }
    #Menu {
-      background-image: url(./assets/menu.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 100% auto;
-      background-position: center;
-      background-color: #202938;
-
+      display: flex;
+      flex-wrap: wrap;
+      h1{
+         width: 100%;
+         background-color: aliceblue;
+      }
+     img{
+      max-width: 50%;
+      height: 80%;
+      justify-content: center;
+      margin: 0 auto;
+     }
+     background-color: var(--bleu);
    }
    #Histoire {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2,auto) 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-   background-color: #695d5d;
-      }
-      h1{
-        grid-column: 1 / 3  ;
-        grid-row: 1; 
-      }
-      h3{
-        grid-column-start: 2;
-        grid-row-start: 2;
-         color: #ffffff;
-         padding: 10px 20px;
-         text-align: center;
-         font-size: 2rem ;
-      
-
-      }
-      img {
-        grid-row:3/4 ;
-        place-self: center;
-        margin: 10px;
-
-      }
-      p {
-         color: #ffffff;
-         text-align: center;
-         grid-column-start: 2 ;
-         grid-row-start: 3;
-         justify-content:left ; 
-         align-items: baseline; 
-         height: 100%;
-         font-size: 1.4rem ;
-         margin: 150px;
-      }
-
-}
-
-footer {
-   background-color: #1a1a1a;
-   color: #ffffff;
-   padding: 10px 20px;
-   text-align: center;
-   nav ul {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto) 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      background-color: #695d5d;
+   }
+   h1 {
+      grid-column: 1 / 3;
+      grid-row: 1;
+   }
+   h3 {
+      grid-column-start: 2;
+      grid-row-start: 2;
+      color: #ffffff;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 2rem;
+   }
+   img {
+      grid-row: 3/4;
+      place-self: center;
+      margin: 10px;
+   }
+   p {
+      color: #ffffff;
+      text-align: center;
+      grid-column-start: 2;
+      grid-row-start: 3;
       justify-content: center;
-      list-style: none;
+      align-items: center;
+      font-size: 1.4rem;
+      padding: 0 10%;
+      margin-top: 15% ;
+   }
+
+   #Galerie{
+
+   }
+   .NosServices {
+      h1{
+         width: 100%;
+      }
+      height: auto ;
       display: flex;
-      gap: 15px;
-      li {
-         font-size: 2rem;
-         padding: 10px 15px;
-         cursor: pointer;
-         transition: background-color 0.3s ease, color 0.3s ease;
-         &:hover {
-            background-color: #ffffff;
-            color: #1a1a1a;
-            border-radius: 5px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap ;
+      column-gap: 10em;
+      padding-bottom: 10%;
+      img {
+         width: 100px;
+      }
+      figure {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         width: fit-content;
+         margin-top: 10%;
+         border:2px solid var(--jaune);
+         border-radius: 10px;
+         background-color: var(--jaune);
+         padding: 0.5em 1em ;
+         transition: all 0.3s;
+      }
+      figcaption {
+         text-align: center;
+         font-size: large;
+         
+      }
+      figure:hover {
+         scale: 1.2;
+         transition: all 0.3s;
+      }
+   }
+
+   .Payement {
+      background-color: var(--jaune);
+   }
+
+   footer {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      padding: 10px 20px;
+      text-align: center;
+      nav ul {
+         justify-content: center;
+         list-style: none;
+         display: flex;
+         gap: 15px;
+         li {
+            font-size: 2rem;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            &:hover {
+               background-color: #ffffff;
+               color: #1a1a1a;
+               border-radius: 5px;
+            }
          }
       }
    }
 }
 
-
-/* Media query pour les écrans de moins de 768px (tablettes et mobiles) */
+/* Media query pour les écrans de moins de 768px (tablettes et mobiles)
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
+   body {
+      font-size: 14px;
+   }
 
-  .container {
-    padding: 10px;
-  }
+   .container {
+      padding: 10px;
+   }
 }
 
-/* Media query pour les écrans de moins de 480px (mobiles) */
+Media query pour les écrans de moins de 480px (mobiles) 
 @media (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
+   body {
+      font-size: 12px;
+   }
 
-  .container {
-    padding: 5px;
-  }
-}
+   .container {
+      padding: 5px;
+   }
+} */
