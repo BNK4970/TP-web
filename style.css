@@ -96,17 +96,17 @@ main {
    #Menu {
       display: flex;
       flex-wrap: wrap;
-      h1{
+      h1 {
          width: 100%;
          background-color: aliceblue;
       }
-     img{
-      max-width: 50%;
-      height: 80%;
-      justify-content: center;
-      margin: 0 auto;
-     }
-     background-color: var(--bleu);
+      img {
+         max-width: 50%;
+         height: 80%;
+         justify-content: center;
+         margin: 0 auto;
+      }
+      background-color: var(--bleu);
    }
    #Histoire {
       display: grid;
@@ -142,21 +142,20 @@ main {
       align-items: center;
       font-size: 1.4rem;
       padding: 0 10%;
-      margin-top: 15% ;
+      margin-top: 15%;
    }
 
-   #Galerie{
-
+   #Galerie {
    }
    .NosServices {
-      h1{
+      h1 {
          width: 100%;
       }
-      height: auto ;
+      height: auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap ;
+      flex-wrap: wrap;
       column-gap: 10em;
       padding-bottom: 10%;
       img {
@@ -168,16 +167,15 @@ main {
          justify-content: center;
          width: fit-content;
          margin-top: 10%;
-         border:2px solid var(--jaune);
+         border: 2px solid var(--jaune);
          border-radius: 10px;
          background-color: var(--jaune);
-         padding: 0.5em 1em ;
+         padding: 0.5em 1em;
          transition: all 0.3s;
       }
       figcaption {
          text-align: center;
          font-size: large;
-         
       }
       figure:hover {
          scale: 1.2;
@@ -188,27 +186,31 @@ main {
    .Payement {
       background-color: var(--jaune);
    }
+}
 
-   footer {
-      background-color: #1a1a1a;
-      color: #ffffff;
-      padding: 10px 20px;
-      text-align: center;
-      nav ul {
-         justify-content: center;
-         list-style: none;
-         display: flex;
-         gap: 15px;
-         li {
-            font-size: 2rem;
-            padding: 10px 15px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            &:hover {
-               background-color: #ffffff;
-               color: #1a1a1a;
-               border-radius: 5px;
-            }
+footer {
+   background-color: #1a1a1a;
+   color: #ffffff;
+   text-align: center;
+   padding: 20px; 
+   nav ul {
+      justify-content: center;
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      li {
+         font-size: 2rem;
+         padding: 10px 15px;
+         cursor: pointer;
+         transition: background-color 0.3s ease, color 0.3s ease;
+         &:hover {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            border-radius: 5px;
+         }
+         a {
+            text-decoration: none; /* Supprime le soulignement */
+            color: inherit; /* Hérite de la couleur du texte par défaut */
          }
       }
    }
