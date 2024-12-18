@@ -3,16 +3,14 @@
    --jaune: #e3d3ab ;
    --bleu: #202938 ;
 }
-@media ()
-
 
 * {
    margin: 0;
    padding: 0;
-   box-sizing: border-box;
-}
-html{
 
+}
+/* test html */
+html{
    scroll-padding-top: 70px;
    scroll-behavior:smooth;
 }
@@ -108,7 +106,7 @@ main {
    }
    #Histoire {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(2,auto) 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
