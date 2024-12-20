@@ -2,6 +2,7 @@
    --background: #1a1a1a;
    --jaune: #e3d3ab;
    --bleu: #202938;
+   --violet :#673ab7 ;
 }
 
 * {
@@ -47,6 +48,7 @@ header {
          padding: 10px 15px;
          cursor: pointer;
          transition: background-color 0.3s ease, color 0.3s ease;
+         color: var(--violet);
          &:hover {
             background-color: #ffffff;
             color: #1a1a1a;
@@ -62,6 +64,7 @@ header {
       font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: 2px;
+      color: var(--violet);
       a {
          text-decoration: none; /* Supprime le soulignement */
          color: inherit; /* Hérite de la couleur du texte par défaut */
@@ -74,24 +77,54 @@ main {
       height: 100vh;
    }
    #hero {
-      background-image: url(./assets/fondhero.jpg);
-      background-repeat: no-repeat;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('./assets/fondhero.jpg'); /* Remplacez par le chemin de l'image */
       background-size: cover;
       background-position: center;
+      height: 100vh;
       display: flex;
-      justify-content: center; /* Centrage horizontal */
-      align-items: center; /* Centrage vertical */
-      color: #e3d3ab; /* Couleur du texte */
-      font-size: 10rem; /* Taille du texte */
-      font-weight: bold;
-      text-shadow: 4px 4px 4px var(--background);
-      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-      p {
-         display: flex;
-         justify-content: center; /* Centrage horizontal */
-         align-items: center; /* Centrage vertical */
+      align-items: center;
+      article {
+      justify-content: flex-start;
+      background: rgb(221, 214, 194, 0.9 );
+      border-radius: 15px;
+      padding: 40px 50px; 
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+      max-width: 30%; 
+      height: auto;
+         h4{
+            font-size: 34px;
+            color: #673ab7; /* Violet */
+            margin: 0 0 10px;
+         }
+         p {
+            font-size: 16px;
+            color: #000000; /* Gris */
+            margin: 0 0 20px;
+          }
+          .special-button {
+            background: transparent;
+            color: #673ab7;
+            border: 2px solid #673ab7;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+          }
+          
+          .special-button:hover {
+            background: orange;
+            color: #fff;
+            border-color: orange;
+          }
+
       }
+      
+     
    }
    #Menu {
       display: flex;
