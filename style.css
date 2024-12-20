@@ -8,7 +8,7 @@
 * {
    margin: 0;
    padding: 0;
-   /* box-shadow: 0 0 0 3px red inset; */
+    /* box-shadow: 0 0 0 3px red inset;  */
 }
 /* test html */
 html {
@@ -76,34 +76,31 @@ main {
    }
    #hero {
       font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-image: url('./assets/fondhero.jpg'); /* Remplacez par le chemin de l'image */
+      background-image: url('./assets/fondhero.jpg');
       background-size: cover;
       background-position: center;
-      height: 100vh;
       display: flex;
       align-items: center;
-      article {
       justify-content: flex-start;
+      article {
       background: rgb(221, 214, 194, 0.9 );
       border-radius: 15px;
-      padding: 40px 50px; 
+      padding: 40px; 
       text-align: center;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-      max-width: 30%; 
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
+      max-width:  30%; 
       height: auto;
          h4{
             font-size: 34px;
             color: #673ab7; /* Violet */
-            margin: 0 0 10px;
+            margin: 0px 0 12px;
          }
          p {
             font-size: 16px;
             color: #000000; /* Gris */
             margin: 0 0 20px;
           }
-          .special-button {
+          button {
             background: transparent;
             color: #673ab7;
             border: 2px solid #673ab7;
@@ -111,13 +108,15 @@ main {
             border-radius: 5px;
             font-size: 14px;
             cursor: pointer;
-            transition: background 0.3s, color 0.3s;
+            transition: all 0.3s;
           }
           
-          .special-button:hover {
+          button:hover {
+            scale: 1.1;
             background: orange;
             color: #fff;
             border-color: orange;
+            transition: all 0.3s;
           }
 
       }
