@@ -48,7 +48,6 @@ header {
          padding: 10px 15px;
          cursor: pointer;
          transition: background-color 0.3s ease, color 0.3s ease;
-         color: var(--violet);
          &:hover {
             background-color: #ffffff;
             color: #1a1a1a;
@@ -64,7 +63,6 @@ header {
       font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: 2px;
-      color: var(--violet);
       a {
          text-decoration: none; /* Supprime le soulignement */
          color: inherit; /* Hérite de la couleur du texte par défaut */
