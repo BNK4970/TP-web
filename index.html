@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="fr">
    <head>
       <meta charset="UTF-8" />
       <!-- Favicon -->
-      <link rel="shortcut icon" href="./assets/favicon.ico" type="image" />
+      <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
       <!-- Titre de la page -->
       <title>ABYSSE</title>
       <!-- Style -->
@@ -11,78 +12,51 @@
    <body>
       <header>
          <p><a href="#hero">ABYSSE</a></p>
+         <!-- Navigation -->
          <nav>
             <ul>
-               <li><a href="#Menu">Menu</a></li>
+               <li><a href="#hero">Accueil</a></li>
+               <li><a href="#Apropos">À Propos</a></li>
                <li><a href="#Galerie">Galerie</a></li>
-               <li><a href="#Histoire">Histoire</a></li>
-               <li><a href="Resa.html">Reservation</a></li>
+               <li><a href="#Specialité">Spécialité</a></li>
+               <li><a href="#Horaires">Horaires</a></li>
             </ul>
          </nav>
+         <!-- Bouton Réserver -->
+         <button class="btn-reserver">
+            <a href="#Reservation">Réserver</a>
+         </button>
       </header>
-      <main>
-         <section id="hero">
-            <article>
-               <h4>Bienvenue chez Abysse</h4>
-            <p>Vivez la Provence authentique, entre saveurs, art et convivialité</p>
-            <button>Notre spécialité</button>
-            </article>
-            
-         </section>
-         <section id="Menu">
-            <h1>Menu</h1>
-            <img src="./assets/menu.png" alt="Menu" />
-         </section>
-         <section id="Galerie">
-            <h1>Galerie</h1>
-         </section>
-         <section id="Histoire">
-            <h1>Notre Histoire</h1>
-            <h3>Cuisine Locale</h3>
-            <p>
-               Abysse est situé dans un charmant village provençal, à quelques
-               pas de la Méditerranée. Le restaurant tire son nom des
-               profondeurs marines qui inspirent ses créations culinaires. Le
-               chef, Julien Dumas, a grandi entre les marchés provençaux et les
-               criques méditerranéennes, développant un amour pour les produits
-               frais et les saveurs authentiques. La cuisine d’Abysse explore un
-               mariage entre la richesse de la terre et la fraîcheur des océans.
-               Chaque plat est une immersion dans un univers de textures et de
-               saveurs, évoquant les couleurs et les parfums de la Provence. La
-               salle du restaurant, intime et élégante, s’illumine à la lumière
-               des chandelles, créant une atmosphère à la fois chic et
-               chaleureuse.
-            </p>
-         </section>
-         <section class="NosServices">
-            <h1>Nos Services</h1>
-            <figure>
-               <img src="./assets/parking.png" alt="logo_parking" />
-               <figcaption>Parking</figcaption>
-            </figure>
-            <figure>
-               <img src="./assets/wifi.png" alt="logowifi" />
-               <figcaption>Wifi</figcaption>
-            </figure>
-            <figure>
-               <img src="./assets/terasse.png" alt="terrasse" />
-               <figcaption>Terrasse</figcaption>
-            </figure>
-         </section>
-         <section class="Payement">
-            <h1>Payement</h1>
-         </section>
-      </main>
-
-      <footer>
-         <nav>
-            <ul>
-               <li>Menu</li>
-               <li>Galerie</li>
-               <li>Histoire</li>
-               <li>Reservation</li>
-            </ul>
-         </nav>
-      </footer>
+      <!-- Section Héro -->
+      <section id="hero">
+         <article>
+            <h1>LA PROVENCE ENTRE VOS MAINS</h1>
+            <p>Vivez la Provence authentique, entre saveurs,<br> art et convivialité</p>
+            <button class="btn-specialite">Notre spécialité</button>
+         </article>
+      </section>
+      <section id="Apropos">
+         <h2>A PROPOS</h2>
+         <p>Decouvrez l'essence de la Provence dans notre restaurant chaleureux, ou authenticité et saveurs méditerranéennes se rencontrent. Nos plats, préparés avec des produits frais du terroir, célèbrent des classiques comme la ratatouille, la daube provençale et la crème brulee a la fleur d'oranger.
+         Accompagnez votre repas d'un verre de vin local, soigneusement. sélectionné pour sublimer chaque bouchée. Que ce soit sous le chant des cigales en terrasse ou dans une ambiance intimiste, vivez un moment de pure convivialité provençale. Savourez la Provence à chaque instant.</p>
+      </section>
+      <section id="Galerie">
+         <h3>Galerie</h3>
+         <figure id="C">
+            <img src="./assets/Cprovencale.jpg" alt="Chef Provençale" />
+            <figcaption>Chef Provençale</figcaption>
+         </figure>
+         <figure id="A">
+            <img src="./assets/Aprovencale.jpg" alt="Ambiance Provençale" />
+            <figcaption>Ambiance Provençale</figcaption>
+         </figure>
+         <figure id="P">
+            <img src="./assets/Pprovencale.jpg" alt="Paysage Provençale" />
+            <figcaption>Paysage Provençale</figcaption>
+         </figure>
+         <p>Découvrez l'essence de la Provence à travers des œuvres d'art et d'artisanat inspirés par sa lumière et ses paysages.</p>
+      </section>
+      <section id="#Specialité">
+      </section>
    </body>
 </html>
