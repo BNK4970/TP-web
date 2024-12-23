@@ -80,7 +80,7 @@ button.btn-reserver a:hover {
 
 #hero {
    height: 100vh;
-   background: url('assets/fondhero.jpeg') ;
+   background: url('assets/restaurant.jpeg') ;
    background-position: center;
    background-size: cover;
    display: flex;
@@ -149,7 +149,7 @@ button.btn-specialite a:hover {
 
 }
 
-#Apropos h2 {
+#Apropos h1 {
    font-size: 60px;
    font-family: 'Georgia', serif;
    color: var(--violet); 
@@ -247,7 +247,7 @@ button.btn-specialite a:hover {
    padding: 40px 20px;
 }
 
-#Specialite h4 {
+#Specialite h1 {
    font-size: 60px;
    font-family: 'Georgia', serif;
    color: var(--violet);
@@ -279,6 +279,12 @@ button.btn-specialite a:hover {
    transition: transform 0.3s ease;
 }
 
+#Specialite article:hover{
+      transform: scale(1.04); /* Zoom sur l'image au survol */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Effet de shadow au survol */
+   }
+   
+
 #Specialite #daube {
    flex-direction: row-reverse; /* Inverser l'ordre des éléments pour l'article de la daube */
 }
@@ -286,7 +292,6 @@ button.btn-specialite a:hover {
 #Specialite #daube section{
    text-align: left;
 }
-
 
 #Specialite article img {
    width: 25%; 
@@ -309,7 +314,7 @@ button.btn-specialite a:hover {
    flex-direction: row-reverse; 
 }
 
-#Specialite article h5 {
+#Specialite article h2 {
    font-size: 28px;
    font-family: 'Georgia', serif;
    color: var(--maron);
@@ -325,3 +330,109 @@ button.btn-specialite a:hover {
    line-height: 1.6;
    margin-top: 0; 
 }
+
+#NosServices {
+   background-color: var(--jauneF);
+   height: auto;
+   padding: 40px 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   column-gap: 10em;
+}
+
+#NosServices h1 {
+   font-size: 60px;
+   font-family: 'Georgia', serif;
+   color: var(--violet);
+   margin-bottom: 15px;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   width: 100%;
+}
+
+#NosServices p {
+   width: 100%;
+   font-size: 25px;
+   font-family: 'Arial', sans-serif;
+   color: var(--gris);
+   line-height: 1.6;
+   margin-bottom: 135px;
+   text-align: center;
+}
+
+#NosServices  figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid var(--maronclair);
+      border-radius: 10px;
+      background-color: var(--jaune);
+      padding: 0.5em 1em;
+      transition: all 0.3s;
+      width: 150px;
+   }
+
+   #NosServices  figcaption {
+      text-align: center;
+      font-size: large;
+   }
+   
+   #NosServices figure:hover {
+      scale: 1.2;
+      transition: all 0.5s;
+   }
+
+
+   #Payement {
+      background-color: var(--jaune);
+      height: auto;
+      padding: 40px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 10em ;
+   }
+   
+   #Payement h1 {
+      font-size: 60px;
+      font-family: 'Georgia', serif;
+      color: var(--violet);
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 100vw;
+   }
+
+   #Payement p {
+      width: 100%;
+      font-size: 25px;
+      font-family: 'Arial', sans-serif;
+      color: var(--gris);
+      line-height: 1.6;
+      margin-bottom: 135px;
+      text-align: center;
+   }
+   #Payement  figure {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         border: 1px solid var(--maronclair);
+         border-radius: 10px;
+         background-color: var(--jaune);
+         padding: 0.5em 1em;
+         transition: all 0.3s;
+         width: 150px;
+      }
+   
+      #Payement  figcaption {
+         text-align: center;
+         font-size: large;
+      }
+      
+      #Payement figure:hover {
+         scale: 1.2;
+         transition: all 0.5s;
+      }
