@@ -2,7 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   /* box-shadow: 0 0 0 3px red inset;   */
+ /* box-shadow: 0 0 0 3px red inset;    */
 }
 :root {
    --jaune: #fdf6e3;
@@ -136,7 +136,7 @@ button.btn-specialite a:hover {
 
 #Apropos {
    height: auto;
-   background-color: var(--jaune);
+   background-color: var(--jauneF);
    /* display: grid;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: auto 1fr; */
@@ -163,7 +163,7 @@ button.btn-specialite a:hover {
 }
 
 #Galerie {
-   background-color: var(--jauneF);
+   background-color: var(--jaune);
    padding: 40px 20px;
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -238,7 +238,7 @@ button.btn-specialite a:hover {
 }
 
 #Specialite {
-   background-color: var(--jaune);
+   background-color: var(--jauneF);
    padding: 40px 20px;
 }
 
@@ -325,7 +325,7 @@ button.btn-specialite a:hover {
 }
 
 #NosServices {
-   background-color: var(--jauneF);
+   background-color: var(--jaune);
    height: auto;
    padding: 40px 20px;
    display: flex;
@@ -378,7 +378,7 @@ button.btn-specialite a:hover {
 }
 
 #Payement {
-   background-color: var(--jaune);
+   background-color: var(--jauneF);
    height: auto;
    padding: 40px 20px;
    display: flex;
@@ -428,6 +428,70 @@ button.btn-specialite a:hover {
    scale: 1.2;
    transition: all 0.5s;
 }
+
+#Horaires {
+background-color: var(--jaune);
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+padding:40px 20px ;
+
+ }
+ 
+ #Horaires h1 {
+   font-size: 60px;
+   font-family: "Georgia", serif;
+   color: var(--violet);
+   margin-bottom: 15px;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   width: 100vw;
+ }
+ 
+#Horaires p {
+      width: 100%;
+      font-size: 25px;
+      font-family: "Arial", sans-serif;
+      color: var(--gris);
+      line-height: 1.6;
+      margin-bottom: 100px;
+      text-align: center ;
+ }
+ 
+ #Horaires article {
+   display: flex ;
+   width: 30%;
+   background-color: var(--jauneF);
+   padding: 0.5em;
+   border-radius: 8px;
+   margin: 0.5em;
+   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+   height: auto;
+   border: var(--maronclair) solid 1px;
+   transition: transform 0.3s ease;
+}
+
+#Horaires article:hover {
+   transform: scale(1.04); /* Zoom sur l'image au survol */
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Effet de shadow au survol */
+}
+
+ 
+ #Horaires  h3 {
+   font-size: 1.2em;
+   color: #6a4d87;
+   width: 50%;
+ }
+ 
+
+ #Horaires article p {
+   font-size: 1em;
+   color: #333;
+   width: 50%;
+   margin: 0;
+ }
+
 
 #reservation {
    display: flex;
