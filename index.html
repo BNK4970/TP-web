@@ -129,13 +129,12 @@
    <section id="reservation">
       <h1>Réservation</h1>
          <article class="reservation-form">
-           <form action="" method="post">
+           <form action="" method="get">
              
                <legend>Reserver dès maintenant et laissez la Provence eveiller vos sens </legend>
                <label for="prenom">Prénom :</label>
-               <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
-               
                <label for="nom">Nom :</label>
+               <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
                
                <label for="email">Email :</label>
@@ -145,9 +144,8 @@
                <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone"  > 
                
                <label for="personne">Personne :</label>
-               <input type="number" id="personne" name="personne" min="1" max="10" placeholder="Nombre de personnes" required>
-               
                <label for="date">Date :</label>
+               <input type="number" id="personne" name="personne" min="1" max="10" placeholder="Nombre de personnes" required>
                <input type="date" id="date" name="date" required>
                
                <label for="message">Message :</label>
@@ -166,5 +164,8 @@
             </ul>
          </aside>
        </section>
+       <footer>
+         <p>&copy; 2024 Abysse. Tous droits réservés. </p>
+       </footer>
    </body>
 </html>

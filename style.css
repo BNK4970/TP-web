@@ -2,7 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-    /* box-shadow: 0 0 0 3px red inset;        */
+   /* box-shadow: 0 0 0 3px red inset;           */
 } 
 :root {
    --jaune: #fdf6e3;
@@ -459,20 +459,64 @@ button.btn-specialite a:hover {
          width: 50%;
          border: none;
          padding: 0px;
-       }
+      }
         
+      form {
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: row;
+      }
+
        form legend {
          font-size: 1.5rem;
          color: #5a5a5a;
          margin-bottom: 25px;
+         width: 100%;
 
        }
        form label {
          display: block;
          font-size: 1.2rem;
-         margin: 10px ;
          color: #5a5a5a;
        }
+
+       form label[for="prenom"], 
+      form label[for="nom"], 
+      form label[for="date"], 
+      form label[for="personne"] {
+         width: 47%;
+         margin: 0;
+      }
+
+      form label[for="nom"]{
+         margin-left: 6%;
+      }
+
+      form label[for="date"]{
+         margin-left: 6%;
+      }
+
+      #nom , #prenom {
+         width: 47%;
+         display: flex;
+         flex-wrap: wrap;
+         margin: 0 ;
+      }
+
+      #nom{
+         margin-left: 6%;
+      }
+
+      #date , #personne {
+         width: 47%;
+         display: flex;
+         flex-wrap: wrap;
+         margin: 0 ;
+      }
+
+      #date {
+         margin-left: 6%;
+      }
        
        form input,
        form textarea {
@@ -489,7 +533,8 @@ button.btn-specialite a:hover {
          resize: none;
          height: 80px;
        }
-       
+
+
 
        .contact-info {
          width: 50%;
