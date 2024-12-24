@@ -2,45 +2,44 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   /* box-shadow: 0 0 0 3px red inset;           */
-} 
+   /* box-shadow: 0 0 0 3px red inset;   */
+}
 :root {
    --jaune: #fdf6e3;
-   --jauneF : #eee7d4; 
-   --maronclair : #d3b88c ;
-   --maron : #69574d ;
+   --jauneF: #eee7d4;
+   --maronclair: #d3b88c;
+   --maron: #69574d;
    --bleu: #202938;
-   --violet :#6a4c93 ;
-   --gris  :#302f2f ;
+   --violet: #6a4c93;
+   --gris: #302f2f;
 }
 button {
    all: unset; /* Réinitialise tous les styles par défaut */
    cursor: pointer; /* Ajoute le curseur pointeur pour l'interaction */
 }
 html {
-   scroll-behavior: smooth ;
+   scroll-behavior: smooth;
    scroll-padding-top: 9vh;
 }
 
 header {
    display: flex;
-   flex-direction: row;  
-   justify-content: space-between ;
-   background-color: var(--jauneF) ;
+   flex-direction: row;
+   justify-content: space-between;
+   background-color: var(--jauneF);
    padding: 25px 30px;
    z-index: 1000;
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-   color:var(--violet);
+   color: var(--violet);
    position: fixed;
    width: 100%;
    box-sizing: border-box; /* Ajouté pour inclure padding et border dans la largeur totale */
-
 }
 
 header p a {
    font-size: 30px;
    font-weight: 900;
-   text-decoration: none; 
+   text-decoration: none;
    color: var(--violet);
 }
 
@@ -50,14 +49,13 @@ header nav ul {
    justify-content: space-around;
    flex-direction: row;
    gap: 30px;
-   
 }
 
- header nav ul li a {
+header nav ul li a {
    text-decoration: none;
    font-size: 30px;
    color: #302f2f;
-} 
+}
 nav ul li a:hover {
    cursor: pointer;
    text-decoration: underline;
@@ -65,22 +63,22 @@ nav ul li a:hover {
 
 button.btn-reserver a {
    text-decoration: none;
-   background: transparent ;
+   background: transparent;
    color: var(--violet);
    padding: 10px 20px;
    border-radius: 5px;
    font-size: 20px;
-   border:1px solid var(--violet);
+   border: 1px solid var(--violet);
 }
 
 button.btn-reserver a:hover {
    background-color: #513c86;
-   color: white ;
+   color: white;
 }
 
 #hero {
    height: 100vh;
-   background: url('assets/restaurant.jpeg') ;
+   background: url("assets/restaurant.jpeg");
    background-position: center;
    background-size: cover;
    display: flex;
@@ -94,10 +92,10 @@ button.btn-reserver a:hover {
 #hero article {
    height: auto;
    border-radius: 15px;
-   padding: 10px 20px; 
+   padding: 10px 20px;
    display: flex;
    background-color: rgba(253, 246, 227, 0.8);
-   margin-left: 8vw ;
+   margin-left: 8vw;
    width: 25vw;
    flex-wrap: wrap;
    text-align: left;
@@ -109,15 +107,14 @@ button.btn-reserver a:hover {
    margin-bottom: 20px;
 }
 
-#hero article p { 
+#hero article p {
    font-size: 20px;
-   color: var(--gris) ;
+   color: var(--gris);
    margin: 0 0 20px;
-
 }
 
 button.btn-specialite {
-   text-decoration: none;  /* Supprimer le soulignement du lien (si c'est une ancre) */
+   text-decoration: none; /* Supprimer le soulignement du lien (si c'est une ancre) */
    background: transparent;
    color: var(--violet);
    padding: 10px 20px;
@@ -137,7 +134,6 @@ button.btn-specialite a:hover {
    color: white;
 }
 
-
 #Apropos {
    height: auto;
    background-color: var(--jaune);
@@ -146,13 +142,12 @@ button.btn-specialite a:hover {
    grid-template-rows: auto 1fr; */
    text-align: center;
    padding: 5vh 0;
-
 }
 
 #Apropos h1 {
    font-size: 60px;
-   font-family: 'Georgia', serif;
-   color: var(--violet); 
+   font-family: "Georgia", serif;
+   color: var(--violet);
    margin-bottom: 5vh;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
    display: inline-block;
@@ -161,25 +156,24 @@ button.btn-specialite a:hover {
 
 #Apropos p {
    font-size: 22px;
-   font-family: 'Arial', sans-serif;
+   font-family: "Arial", sans-serif;
    padding: 0 20vw;
    line-height: 1.8;
    color: #333;
 }
 
 #Galerie {
-   background-color: var(--jauneF); 
+   background-color: var(--jauneF);
    padding: 40px 20px;
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: auto 1fr auto ;
-   
+   grid-template-rows: auto 1fr auto;
 }
 
 #Galerie h3 {
    font-size: 60px;
-   font-family: 'Georgia', serif;
-   color: var(--violet); 
+   font-family: "Georgia", serif;
+   color: var(--violet);
    margin-bottom: 10vh;
    grid-row: 1/2;
    grid-column: 1/4;
@@ -187,27 +181,26 @@ button.btn-specialite a:hover {
 }
 
 #Galerie figure {
- width: auto ;
- transition: transform 0.5s ease;
- background-color: var(--violet);
- border-radius: 10px;
- box-shadow: 0 8px 15px var(--maron);
+   width: auto;
+   transition: transform 0.5s ease;
+   background-color: var(--violet);
+   border-radius: 10px;
+   box-shadow: 0 8px 15px var(--maron);
 }
 
 #Galerie figure img {
-   width: 100%; 
+   width: 100%;
    display: block;
-   border-radius: 10px 10px 0 0 ;
-
+   border-radius: 10px 10px 0 0;
 }
 
 #Galerie figcaption {
    color: #ffffff;
    padding: 10px;
    font-size: 20px;
-   background-color: var(--violet); 
+   background-color: var(--violet);
    text-align: center;
-   border-radius: 0 0 10px 10px ;
+   border-radius: 0 0 10px 10px;
 }
 
 #Galerie p {
@@ -215,12 +208,14 @@ button.btn-specialite a:hover {
    color: #333;
    grid-column: 1/4;
    grid-row: 3/4;
-   padding:  10vh 30vw 3vh 30vw ;
+   padding: 10vh 30vw 3vh 30vw;
    text-align: center;
 }
 
-#Galerie #C, #Galerie #P, #Galerie #A {
-   margin: 0 2vw; 
+#Galerie #C,
+#Galerie #P,
+#Galerie #A {
+   margin: 0 2vw;
 }
 
 #Galerie #C {
@@ -236,7 +231,7 @@ button.btn-specialite a:hover {
 #Galerie #A {
    grid-column: 3/4;
    grid-row: 2/3;
-} 
+}
 
 #Galerie figure:hover {
    transform: scale(1.1); /* Agrandit la figure (image + légende) de 10% */
@@ -249,7 +244,7 @@ button.btn-specialite a:hover {
 
 #Specialite h1 {
    font-size: 60px;
-   font-family: 'Georgia', serif;
+   font-family: "Georgia", serif;
    color: var(--violet);
    margin-bottom: 10px;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -258,44 +253,42 @@ button.btn-specialite a:hover {
 
 #Specialite #intro {
    font-size: 25px;
-   font-family: 'Arial', sans-serif;
+   font-family: "Arial", sans-serif;
    color: var(--gris);
    line-height: 1.6;
    margin-bottom: 20px;
    text-align: center;
    margin: 0 20vw;
-   
 }
 
 #Specialite article {
    display: flex;
-   flex-direction: row; 
+   flex-direction: row;
    background-color: var(--maronclair);
    border-radius: 10px;
    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
    padding: 20px;
    margin: 5vh 10vw;
-   gap: 40px; 
+   gap: 40px;
    transition: transform 0.3s ease;
 }
 
-#Specialite article:hover{
-      transform: scale(1.04); /* Zoom sur l'image au survol */
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Effet de shadow au survol */
-   }
-   
+#Specialite article:hover {
+   transform: scale(1.04); /* Zoom sur l'image au survol */
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Effet de shadow au survol */
+}
 
 #Specialite #daube {
    flex-direction: row-reverse; /* Inverser l'ordre des éléments pour l'article de la daube */
 }
 
-#Specialite #daube section{
+#Specialite #daube section {
    text-align: left;
 }
 
 #Specialite article img {
-   width: 25%; 
-   height:auto ;
+   width: 25%;
+   height: auto;
    border-radius: 10px;
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
    align-items: center;
@@ -304,31 +297,31 @@ button.btn-specialite a:hover {
 
 #Specialite article section {
    display: flex;
-   flex-direction: row; 
+   flex-direction: row;
    flex-wrap: wrap;
-   width: 70%; 
+   width: 70%;
    padding: 20px 0;
 }
 
 #Specialite article:nth-child(2) {
-   flex-direction: row-reverse; 
+   flex-direction: row-reverse;
 }
 
 #Specialite article h2 {
    font-size: 28px;
-   font-family: 'Georgia', serif;
+   font-family: "Georgia", serif;
    color: var(--maron);
-   text-align: left; 
+   text-align: left;
    margin-bottom: 30px;
    width: 100%;
 }
 
 #Specialite article p {
    font-size: 20px;
-   font-family: 'Arial', sans-serif;
+   font-family: "Arial", sans-serif;
    color: var(--gris);
    line-height: 1.6;
-   margin-top: 0; 
+   margin-top: 0;
 }
 
 #NosServices {
@@ -344,7 +337,7 @@ button.btn-specialite a:hover {
 
 #NosServices h1 {
    font-size: 60px;
-   font-family: 'Georgia', serif;
+   font-family: "Georgia", serif;
    color: var(--violet);
    margin-bottom: 15px;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -355,224 +348,247 @@ button.btn-specialite a:hover {
 #NosServices p {
    width: 100%;
    font-size: 25px;
-   font-family: 'Arial', sans-serif;
+   font-family: "Arial", sans-serif;
    color: var(--gris);
    line-height: 1.6;
-   margin-bottom: 135px;
+   margin-bottom: 100px;
    text-align: center;
 }
 
-#NosServices  figure {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      border: 1px solid var(--maronclair);
-      border-radius: 10px;
-      background-color: var(--jaune);
-      padding: 0.5em 1em;
-      transition: all 0.3s;
-      width: 150px;
-   }
+#NosServices figure {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border: 1px solid var(--maronclair);
+   border-radius: 10px;
+   background-color: var(--jaune);
+   padding: 0.5em 1em;
+   transition: all 0.3s;
+   width: 120px;
+}
 
-   #NosServices  figcaption {
-      text-align: center;
-      font-size: large;
-   }
-   
-   #NosServices figure:hover {
-      scale: 1.2;
-      transition: all 0.5s;
-   }
+#NosServices figcaption {
+   text-align: center;
+   font-size: large;
+}
+
+#NosServices figure:hover {
+   scale: 1.2;
+   transition: all 0.5s;
+}
+
+#Payement {
+   background-color: var(--jaune);
+   height: auto;
+   padding: 40px 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   column-gap: 10em;
+}
+
+#Payement h1 {
+   font-size: 60px;
+   font-family: "Georgia", serif;
+   color: var(--violet);
+   margin-bottom: 15px;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   width: 100vw;
+}
+
+#Payement p {
+   width: 100%;
+   font-size: 25px;
+   font-family: "Arial", sans-serif;
+   color: var(--gris);
+   line-height: 1.6;
+   margin-bottom: 100px;
+   text-align: center;
+}
+#Payement figure {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border: 1px solid var(--maronclair);
+   border-radius: 10px;
+   background-color: var(--jaune);
+   padding: 0.5em 1em;
+   transition: all 0.3s;
+   width: 120px;
+}
+
+#Payement figcaption {
+   text-align: center;
+   font-size: large;
+}
+
+#Payement figure:hover {
+   scale: 1.2;
+   transition: all 0.5s;
+}
+
+#reservation {
+   display: flex;
+   padding: 43px 20px ;
+   flex-wrap: wrap;
+   background-color: var(--jauneF);
+}
+
+#reservation h1 {
+   font-size: 60px;
+   font-family: "Georgia", serif;
+   color: var(--violet);
+   margin-bottom: 55px;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   width: 100%;
+}
+
+.reservation-form {
+   width: 50%;
+   border: none;
+   padding: 0px;
+}
+
+form {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+}
+
+form legend {
+   font-size: 1.5rem;
+   color: #5a5a5a;
+   margin-bottom: 25px;
+   width: 100%;
+}
+form label {
+   display: block;
+   font-size: 1.2rem;
+   color: #5a5a5a;
+}
+
+form label[for="prenom"],
+form label[for="nom"],
+form label[for="date"],
+form label[for="personne"] {
+   width: 47%;
+   margin: 0;
+}
+
+form label[for="nom"] {
+   margin-left: 6%;
+}
+
+form label[for="date"] {
+   margin-left: 6%;
+}
+
+#nom,
+#prenom {
+   width: 47%;
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0;
+   margin-bottom: 15px;
+}
+
+#nom {
+   margin-left: 6%;
+}
+
+#date,
+#personne {
+   width: 47%;
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0;
+   margin-bottom: 15px;
+}
+
+#date {
+   margin-left: 6%;
+}
+
+form input,
+form textarea {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid var(--maronclair);
+   border-radius: 5px;
+   font-size: 1rem;
+   margin-bottom: 15px;
+   background-color: var(--jaune);
+}
+
+form textarea {
+   resize: none;
+   height: 80px;
+}
+
+.contact-info {
+   width: 50%;
+   padding: 0 5vw;
+}
+
+.contact-info h2 {
+   font-size: 2rem;
+   color: #3c3c3d;
+   margin-bottom: 10px;
+}
+
+.contact-info p {
+   padding: 5vh 0;
+   font-size: 1.5rem;
+   color: #5a5a5a;
+   margin-bottom: 20px;
+}
+
+#reservation ul li {
+   font-size: 1rem;
+   color: #5a5a5a;
+   margin-bottom: 10px;
+   text-decoration: none;
+   list-style: none;
+}
+
+#map {
+   color: #5a5a5a;
+   text-decoration: none;
+   color: none;
+   list-style: none;
+}
+
+#map:hover {
+   cursor: pointer;
+   text-decoration: underline;
+   color: blue;
+}
+
+form #confirmation {
+   text-decoration: none;
+   background-color: var(--jaune);
+   color: #5a5a5a;
+   padding: 10px 20px;
+   border-radius: 5px;
+   font-size: 20px;
+   border: 1px solid var(--maronclair);
+}
+
+form #confirmation:hover {
+   background-color: #513c86;
+   color: white;
+}
 
 
-   #Payement {
-      background-color: var(--jaune);
-      height: auto;
-      padding: 40px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      column-gap: 10em ;
-   }
-   
-   #Payement h1 {
-      font-size: 60px;
-      font-family: 'Georgia', serif;
-      color: var(--violet);
-      margin-bottom: 15px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      width: 100vw;
-   }
+footer {
+   height: 8vh;
+   background: linear-gradient(to left, var(--violet), #2665d1);
+}
 
-   #Payement p {
-      width: 100%;
-      font-size: 25px;
-      font-family: 'Arial', sans-serif;
-      color: var(--gris);
-      line-height: 1.6;
-      margin-bottom: 135px;
-      text-align: center;
-
-   }
-   #Payement  figure {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         border: 1px solid var(--maronclair);
-         border-radius: 10px;
-         background-color: var(--jaune);
-         padding: 0.5em 1em;
-         transition: all 0.3s;
-         width: 150px;
-      }
-   
-      #Payement  figcaption {
-         text-align: center;
-         font-size: large;
-      }
-      
-      #Payement figure:hover {
-         scale: 1.2;
-         transition: all 0.5s;
-      }
-
-      #reservation{
-         display: flex;
-         padding: 20px;
-         flex-wrap: wrap;
-         background-color: var(--jauneF) ;
-       }
-
-      #reservation h1 {
-         font-size: 60px;
-         font-family: 'Georgia', serif;
-         color: var(--violet);
-         margin-bottom: 55px;
-         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-         text-align: center;
-         width: 100% ;
-      }
-
-       .reservation-form {
-         width: 50%;
-         border: none;
-         padding: 0px;
-      }
-        
-      form {
-         display: flex;
-         flex-wrap: wrap;
-         flex-direction: row;
-      }
-
-       form legend {
-         font-size: 1.5rem;
-         color: #5a5a5a;
-         margin-bottom: 25px;
-         width: 100%;
-
-       }
-       form label {
-         display: block;
-         font-size: 1.2rem;
-         color: #5a5a5a;
-       }
-
-       form label[for="prenom"], 
-      form label[for="nom"], 
-      form label[for="date"], 
-      form label[for="personne"] {
-         width: 47%;
-         margin: 0;
-      }
-
-      form label[for="nom"]{
-         margin-left: 6%;
-      }
-
-      form label[for="date"]{
-         margin-left: 6%;
-      }
-
-      #nom , #prenom {
-         width: 47%;
-         display: flex;
-         flex-wrap: wrap;
-         margin: 0 ;
-      }
-
-      #nom{
-         margin-left: 6%;
-      }
-
-      #date , #personne {
-         width: 47%;
-         display: flex;
-         flex-wrap: wrap;
-         margin: 0 ;
-      }
-
-      #date {
-         margin-left: 6%;
-      }
-       
-       form input,
-       form textarea {
-         width: 100%;
-         padding: 10px;
-         border: 1px solid var(--maronclair);
-         border-radius: 5px;
-         font-size: 1rem;
-         margin-bottom: 15px;
-         background-color: var(--jaune);
-       }
-       
-       form textarea {
-         resize: none;
-         height: 80px;
-       }
-
-
-
-       .contact-info {
-         width: 50%;
-         padding: 0 5vw;
-       }
-       
-       .contact-info  h2 {
-         font-size: 2rem;
-         color: #6b3c90;
-         margin-bottom: 10px;
-       }
-       
-       .contact-info p {
-         padding: 5vh 0 ;
-         font-size: 1.5rem;
-         color: #5a5a5a;
-         margin-bottom: 20px;
-       }
-       
-       ul li {
-         font-size: 1rem;
-         color: #5a5a5a;
-         margin-bottom: 10px;
-         text-decoration: none;
-         list-style: none;
-       }
-
-      form #confirmation  {
-         text-decoration: none;
-         background-color: var(--jaune);
-         color: #5a5a5a;
-         padding: 10px 20px;
-         border-radius: 5px;
-         font-size: 20px;
-         border: 1px solid var(--maronclair);
-      }
-      
-      form #confirmation:hover {
-         background-color: #513c86;
-         color: white ;
-      }
+footer p {
+   text-align: center;
+   padding: 2.5vh 0;
+}
