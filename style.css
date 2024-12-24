@@ -2,8 +2,21 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
- /* box-shadow: 0 0 0 3px red inset;    */
+   /* box-shadow: 0 0 0 3px red inset;    */
 }
+
+.rancho-regular {
+   font-family: "Rancho", serif;
+   font-weight: 400;
+   font-style: normal;
+ }
+ 
+ .poppins-regular {
+   font-family: "Poppins", serif;
+   font-weight: 300;
+   font-style: normal;
+ }
+ 
 :root {
    --jaune: #fdf6e3;
    --jauneF: #eee7d4;
@@ -20,6 +33,14 @@ button {
 html {
    scroll-behavior: smooth;
    scroll-padding-top: 9vh;
+}
+
+h1 {
+   font-family: "Rancho", serif;
+}
+
+p {
+   font-family: "Poppins", serif; 
 }
 
 header {
@@ -146,7 +167,6 @@ button.btn-specialite a:hover {
 
 #Apropos h1 {
    font-size: 60px;
-   font-family: "Georgia", serif;
    color: var(--violet);
    margin-bottom: 5vh;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -156,7 +176,7 @@ button.btn-specialite a:hover {
 
 #Apropos p {
    font-size: 22px;
-   font-family: "Arial", sans-serif;
+   font-family: "Poppins", sans-serif;
    padding: 0 20vw;
    line-height: 1.8;
    color: #333;
@@ -170,9 +190,9 @@ button.btn-specialite a:hover {
    grid-template-rows: auto 1fr auto;
 }
 
-#Galerie h3 {
+#Galerie h1 {
    font-size: 60px;
-   font-family: "Georgia", serif;
+   font-family: "Rancho", serif;
    color: var(--violet);
    margin-bottom: 10vh;
    grid-row: 1/2;
@@ -204,6 +224,7 @@ button.btn-specialite a:hover {
 }
 
 #Galerie p {
+   font-family: "Poppins", serif;
    font-size: 25px;
    color: #333;
    grid-column: 1/4;
@@ -244,7 +265,7 @@ button.btn-specialite a:hover {
 
 #Specialite h1 {
    font-size: 60px;
-   font-family: "Georgia", serif;
+   font-family: "Rancho", serif;
    color: var(--violet);
    margin-bottom: 10px;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -260,6 +281,7 @@ button.btn-specialite a:hover {
    text-align: center;
    margin: 0 20vw;
 }
+
 
 #Specialite article {
    display: flex;
@@ -337,7 +359,7 @@ button.btn-specialite a:hover {
 
 #NosServices h1 {
    font-size: 60px;
-   font-family: "Georgia", serif;
+   font-family: "Rancho", serif;
    color: var(--violet);
    margin-bottom: 15px;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -364,7 +386,7 @@ button.btn-specialite a:hover {
    background-color: var(--jaune);
    padding: 0.5em 1em;
    transition: all 0.3s;
-   width: 120px;
+   width: 130px;
 }
 
 #NosServices figcaption {
@@ -390,7 +412,7 @@ button.btn-specialite a:hover {
 
 #Payement h1 {
    font-size: 60px;
-   font-family: "Georgia", serif;
+   font-family: "Rancho", serif;
    color: var(--violet);
    margin-bottom: 15px;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -416,7 +438,7 @@ button.btn-specialite a:hover {
    background-color: var(--jaune);
    padding: 0.5em 1em;
    transition: all 0.3s;
-   width: 120px;
+   width: 130px;
 }
 
 #Payement figcaption {
@@ -424,43 +446,44 @@ button.btn-specialite a:hover {
    font-size: large;
 }
 
+
+
 #Payement figure:hover {
    scale: 1.2;
    transition: all 0.5s;
 }
 
 #Horaires {
-background-color: var(--jaune);
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-around;
-padding:40px 20px ;
+   background-color: var(--jaune);
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   padding: 40px 20px;
+}
 
- }
- 
- #Horaires h1 {
+#Horaires h1 {
    font-size: 60px;
-   font-family: "Georgia", serif;
+   font-family: "Rancho", serif;
    color: var(--violet);
    margin-bottom: 15px;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
    text-align: center;
    width: 100vw;
- }
- 
+}
+
 #Horaires p {
-      width: 100%;
-      font-size: 25px;
-      font-family: "Arial", sans-serif;
-      color: var(--gris);
-      line-height: 1.6;
-      margin-bottom: 100px;
-      text-align: center ;
- }
- 
- #Horaires article {
-   display: flex ;
+   width: 100%;
+   font-size: 25px;
+   font-family: "Arial", sans-serif;
+   color: var(--gris);
+   line-height: 1.6;
+   margin-bottom: 100px;
+   text-align: center;
+}
+
+#Horaires article {
+   display: flex;
    width: 30%;
    background-color: var(--jauneF);
    padding: 0.5em;
@@ -477,32 +500,29 @@ padding:40px 20px ;
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Effet de shadow au survol */
 }
 
- 
- #Horaires  h3 {
+#Horaires h3 {
    font-size: 1.2em;
    color: #6a4d87;
    width: 50%;
- }
- 
+}
 
- #Horaires article p {
+#Horaires article p {
    font-size: 1em;
    color: #333;
    width: 50%;
    margin: 0;
- }
-
+}
 
 #reservation {
    display: flex;
-   padding: 43px 20px ;
+   padding: 43px 20px;
    flex-wrap: wrap;
    background-color: var(--jauneF);
 }
 
 #reservation h1 {
    font-size: 60px;
-   font-family: "Georgia", serif;
+   font-family: "Rancho", serif;
    color: var(--violet);
    margin-bottom: 55px;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -645,7 +665,6 @@ form #confirmation:hover {
    background-color: #513c86;
    color: white;
 }
-
 
 footer {
    height: 8vh;
