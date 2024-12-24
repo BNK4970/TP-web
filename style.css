@@ -2,7 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-    /* box-shadow: 0 0 0 3px red inset;         */
+    /* box-shadow: 0 0 0 3px red inset;        */
 } 
 :root {
    --jaune: #fdf6e3;
@@ -414,6 +414,7 @@ button.btn-specialite a:hover {
       line-height: 1.6;
       margin-bottom: 135px;
       text-align: center;
+
    }
    #Payement  figure {
          display: flex;
@@ -435,4 +436,98 @@ button.btn-specialite a:hover {
       #Payement figure:hover {
          scale: 1.2;
          transition: all 0.5s;
+      }
+
+      #reservation{
+         display: flex;
+         padding: 20px;
+         flex-wrap: wrap;
+         background-color: var(--jauneF) ;
+       }
+
+      #reservation h1 {
+         font-size: 60px;
+         font-family: 'Georgia', serif;
+         color: var(--violet);
+         margin-bottom: 55px;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+         text-align: center;
+         width: 100% ;
+      }
+
+       .reservation-form {
+         width: 50%;
+         border: none;
+         padding: 0px;
+       }
+        
+       form legend {
+         font-size: 1.5rem;
+         color: #5a5a5a;
+         margin-bottom: 25px;
+
+       }
+       form label {
+         display: block;
+         font-size: 1.2rem;
+         margin: 10px ;
+         color: #5a5a5a;
+       }
+       
+       form input,
+       form textarea {
+         width: 100%;
+         padding: 10px;
+         border: 1px solid var(--maronclair);
+         border-radius: 5px;
+         font-size: 1rem;
+         margin-bottom: 15px;
+         background-color: var(--jaune);
+       }
+       
+       form textarea {
+         resize: none;
+         height: 80px;
+       }
+       
+
+       .contact-info {
+         width: 50%;
+         padding: 0 5vw;
+       }
+       
+       .contact-info  h2 {
+         font-size: 2rem;
+         color: #6b3c90;
+         margin-bottom: 10px;
+       }
+       
+       .contact-info p {
+         padding: 5vh 0 ;
+         font-size: 1.5rem;
+         color: #5a5a5a;
+         margin-bottom: 20px;
+       }
+       
+       ul li {
+         font-size: 1rem;
+         color: #5a5a5a;
+         margin-bottom: 10px;
+         text-decoration: none;
+         list-style: none;
+       }
+
+      form #confirmation  {
+         text-decoration: none;
+         background-color: var(--jaune);
+         color: #5a5a5a;
+         padding: 10px 20px;
+         border-radius: 5px;
+         font-size: 20px;
+         border: 1px solid var(--maronclair);
+      }
+      
+      form #confirmation:hover {
+         background-color: #513c86;
+         color: white ;
       }

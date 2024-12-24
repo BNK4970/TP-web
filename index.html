@@ -24,7 +24,7 @@
          </nav>
          <!-- Bouton Réserver -->
          <button class="btn-reserver">
-            <a href="#Reservation">Réserver</a>
+            <a href="#reservation">Réserver</a>
          </button>
       </header>
       <!-- Section Héro -->
@@ -126,5 +126,45 @@
          <figcaption>Espèce</figcaption>
       </figure>
    </section> 
+   <section id="reservation">
+      <h1>Réservation</h1>
+         <article class="reservation-form">
+           <form action="" method="post">
+             
+               <legend>Reserver dès maintenant et laissez la Provence eveiller vos sens </legend>
+               <label for="prenom">Prénom :</label>
+               <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+               
+               <label for="nom">Nom :</label>
+               <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+               
+               <label for="email">Email :</label>
+               <input type="email" id="email" name="email" placeholder="Votre email" required>
+               
+               <label for="telephone">Téléphone :</label>
+               <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone"  > 
+               
+               <label for="personne">Personne :</label>
+               <input type="number" id="personne" name="personne" min="1" max="10" placeholder="Nombre de personnes" required>
+               
+               <label for="date">Date :</label>
+               <input type="date" id="date" name="date" required>
+               
+               <label for="message">Message :</label>
+               <textarea id="message" name="message" placeholder="Écrivez votre message ici ..."></textarea>
+           
+             <input id="confirmation"  type="submit" value="Reserver">
+           </form>
+         </article>
+         <aside class="contact-info">
+             <h2>Une question, une réservation, ou simplement envie de nous dire bonjour ?</h2>
+           <p>Une question, une réservation, ou simplement envie de nous dire bonjour ?Contactez-nous et laissez-nous vous accompagner dans votre expérience provençale. Que ce soit par téléphone, email ou via notre formulaire, nous sommes à votre écoute pour répondre à vos besoins. À très bientôt chez Abysse !</p>
+           <ul>
+             <li>📞 +33 4 13 94 63 00</li>
+             <li>📱 +33 7 64 XX XX X0</li>
+             <li>📍 413 Av. Gaston Berger, 13100 Aix-en-Provence</li>
+            </ul>
+         </aside>
+       </section>
    </body>
 </html>
