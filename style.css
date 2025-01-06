@@ -8,7 +8,8 @@
 :root {
    --bg-clr: #FDF6E3;
    --bg-clr-secondary: #EEE7D4;
-   --title-clr: #6A4C93;
+   --title-clr :#6a4c93;
+   --input-bg-clr:rgba(106, 76, 147, .2);
    --text-clr: #5C4A42;
    --description-clr: #8C716A;
    --accent-clr: #EFB872;
@@ -17,6 +18,7 @@
    --bg-input-clr: rgba(var(--border-clr), 0.2);
 
    --border: 2px solid rgba(var(--border-clr));
+   --border-radius: 10px;
 }
 button {
    all: unset; // Réinitialise tous les styles par défaut
@@ -25,6 +27,12 @@ button {
 html {
    scroll-behavior: smooth ;
    scroll-padding-top: 9vh;
+   font-family: 'poppins';
+}
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 h1,h2,h3,h4,h5,h6 {
    font-family: 'rancho';
@@ -37,7 +45,6 @@ h2 {
    font-size: 32px;
 }
 p {
-   font-family: 'poppins';
    font-size: 16px;  
    color: var(--text-clr);
    line-height: 26px;
@@ -61,24 +68,44 @@ header {
 main {
    display: flex;
    flex-direction: column;
-   width:100%;
-   height:fit-content;
+   width: 100%;
+   height: fit-content;
 }
 
 section {
-   padding: 70px 50px 20px 20px;
+   padding: 70px 50px 20px 20px; // haut, droit, bas, gauche
    width: 100%;
    height: fit-content;
    background-color: var(--bg-clr);
-   &:nth-child(even) {
-      background-color: var(--bg-clr-secondary);
-   }
-   p, h1 {
-      margin-bottom: 10px;
-   }
+}
+section:nth-child(even) {
+   background-color: var(--bg-clr-secondary);
+}
+section p,h1 {
+   grid-column: 1/4;
+   margin-bottom: 10px;
 }
 
-section:nth-child(7) form {
+/* section nos services */
+#NosServices {
+   display: grid;
+   grid-template-rows: auto auto 1fr 1fr;
+   column-gap: 15px;
+   grid-template-columns: repeat(3, minmax(100px, 150px));
+}
+
+/* section payment */
+#Payement {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(100px, 150px));
+   column-gap: 15px;
+   grid-template-rows: auto, auto, 1fr;
+}
+#Payement figure {
+   
+}
+
+#Reservation form {
    width: 100%;
    height: fit-content;
    display: grid;
@@ -89,14 +116,25 @@ section:nth-child(7) form {
       width: 100%;
    }
 }
-section:nth-child(7) form label {
+#Reservation form label {
+   position: relative;
    color: var(--text-clr);
    font-size: 16px;
 }
-section:nth-child(7) form input,
-section:nth-child(7) form textarea {
+#Reservation form label::before {
+   position: absolute;
+   content: ['*'];
+   top: 0;
+   right: 0;
+   color: red;
+}
+#Reservation form textarea {
+   height: 87px;
+}
+#Reservation form input,
+#Reservation form textarea {
    padding: 10px 20px;
-   border-radius: 10px;
+   border-radius: var(--border-radius);
    border: var(--border); /* Ajout d'une valeur par défaut pour --border */
    grid-column: 1 / 3;
    background-color: var(--bg-input-clr);
@@ -105,58 +143,76 @@ section:nth-child(7) form textarea {
    }
 }
 
-section:nth-child(7) form input {
+#Reservation form input, textarea {
    margin-bottom: 15px;
+   &:hover {
+      border-color: var(--title-clr);
+      background-color: var(--input-bg-clr);
+   }
+   &:focus {
+      outline: none;
+      border: 2px solid var(--title-clr);
+   }
+   &, &:hover {
+      transition: all ease .3s;
+   }
 }
 
 /* Label et champ pour Prénom */
-section:nth-child(7) form label:nth-of-type(1) {
+#Reservation form label:nth-of-type(1) {
    grid-column: 1 / 2;
 }
-section:nth-child(7) form input:nth-of-type(1) {
+#Reservation form input:nth-of-type(1) {
    grid-column: 1 / 2;
    grid-row: 2/3;
 }
 
 /* Label et champ pour Nom */
-section:nth-child(7) form label:nth-of-type(2) {
+#Reservation form label:nth-of-type(2) {
    grid-column: 2 / 3;
 }
-section:nth-child(7) form input:nth-of-type(2) {
+#Reservation form input:nth-of-type(2) {
    grid-column: 2 / 3;
    grid-row: 2/3;
 }
 
 /* Label et champ pour Personne */
-section:nth-child(7) form label:nth-of-type(5) {
+#Reservation form label:nth-of-type(5) {
    grid-column: 1 / 2;
 }
-section:nth-child(7) form input:nth-of-type(5) {
+#Reservation form input:nth-of-type(5) {
    grid-column: 1 / 2;
    grid-row: 8/9;
 }
 
 /* Label et champ pour Date */
-section:nth-child(7) form label:nth-of-type(6) {
+#Reservation form label:nth-of-type(6) {
    grid-column: 2 / 3;
 }
-section:nth-child(7) form input:nth-of-type(6) {
+#Reservation form input:nth-of-type(6) {
    grid-column: 2 / 3;
    grid-row: 8/9;
 }
 
-section:nth-child(7) form button[type="submit"] {
+#Reservation form button[type="submit"] {
    grid-column: 1 / 3;
    display: grid;
    place-items: center;
-   border-radius: 10px;
+   border-radius: var(--border-radius);
    padding: 10px 20px;
    color: var(--title-clr);
    border: 2px solid var(--title-clr);
    margin-top: 15px;
    cursor: pointer;
+   /* lui même et son effet au hover */
+   &, &:hover {
+      transition: all ease .3s;
+   }
 }
-
+#Reservation form button[type="submit"]:hover {
+   background-color: var(--title-clr);
+   color: #E5E5E5;
+}
 
 /* Figure qui contient une IMG */
 figure:has(img) {
@@ -167,11 +223,11 @@ figure:has(img) {
    place-items: center;
    height: 100%;
    width: 100%;
-   border-radius: 10px;
+   border-radius: var(--border-radius);
    overflow: hidden;
    position: relative;
 }
-
+/* Overlay */
 figure:has(img)::before {
    content: '';
    position: absolute;
@@ -181,20 +237,17 @@ figure:has(img)::before {
    opacity: 0.5;
    top: 0;
    left: 0;
-   transition: all ease .3s;
+   transition: all ease-in-out .3s;
 }
-
 figure:has(img):hover::before {
    opacity: 0;
-   transition: all ease .3s;
+   transition: all ease-in-out .3s;
 }
-
 figure:has(img) img {
    width: 100%;
    height: 100%;
    object-fit: cover;
 }
-
 figure:has(img) figcaption {
    z-index: 5;
    background-color: var(--title-clr);
@@ -203,34 +256,27 @@ figure:has(img) figcaption {
    color: #E5E5E5;
 }
 
-
-section:nth-child(5) {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: auto auto 1fr 1fr;
-}
-section:nth-child(5) p,h1 {
-   grid-column: 1/4
-}
 /* Figure qui contient un SVG */
 figure:has(svg) {
    margin: 0 15px 15px 0;
-   width: 100px;
-   height: 100px;
+   width: 100%;
+   aspect-ratio: 1/1;
    display: grid;
    place-items: center;
    grid-template-columns: 1fr;
    grid-template-rows: 1fr;
-   border-radius: 10px;
+   border-radius: var(--border-radius);
    color: var(--title-clr);
    position: relative;
    background-color: rgba(var(--border-clr), .2);
    border: 2px solid rgba(var(--border-clr));
-   figcaption {
-      color: var(--text-clr);
-      position: absolute;
-      bottom:50%;
-      transform: translateY(50%);
-      padding-top: calc(24px * 2);
-   }
+}
+figure:has(svg) figcaption {
+   color: var(--text-clr);
+   position: absolute;
+   bottom:50%;
+   text-align: center;
+   font-size: 14px;
+   transform: translateY(50%);
+   padding: 60% 2px 0;
 }
