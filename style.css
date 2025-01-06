@@ -9,14 +9,14 @@
    font-family: "Rancho", serif;
    font-weight: 400;
    font-style: normal;
- }
- 
- .poppins-regular {
+}
+
+.poppins-regular {
    font-family: "Poppins", serif;
    font-weight: 300;
    font-style: normal;
- }
- 
+}
+
 :root {
    --jaune: #fdf6e3;
    --jauneF: #eee7d4;
@@ -40,7 +40,7 @@ h1 {
 }
 
 p {
-   font-family: "Poppins", serif; 
+   font-family: "Poppins", serif;
 }
 
 header {
@@ -282,7 +282,6 @@ button.btn-specialite a:hover {
    margin: 0 20vw;
 }
 
-
 #Specialite article {
    display: flex;
    flex-direction: row;
@@ -446,8 +445,6 @@ button.btn-specialite a:hover {
    font-size: large;
 }
 
-
-
 #Payement figure:hover {
    scale: 1.2;
    transition: all 0.5s;
@@ -501,16 +498,20 @@ button.btn-specialite a:hover {
 }
 
 #Horaires h3 {
+   display: flex;
    font-size: 1.2em;
    color: #6a4d87;
    width: 50%;
+   align-items: center;
 }
 
 #Horaires article p {
+   display: flex;
    font-size: 1em;
    color: #333;
    width: 50%;
    margin: 0;
+   align-items: center;
 }
 
 #reservation {
@@ -674,4 +675,63 @@ footer {
 footer p {
    text-align: center;
    padding: 2.5vh 0;
+}
+
+@media (max-width: 1240px) {
+   #reservation {
+      flex-direction: column;
+      padding: 20px;
+   }
+
+   .reservation-form,
+   .contact-info {
+      width: 100%;
+   }
+
+   .contact-info {
+      padding: 0;
+   }
+   form legend {
+      font-size: 1.2rem;
+   }
+
+   .contact-info h2 {
+      font-size: 1.5rem;
+   }
+
+   .contact-info p {
+      font-size: 1.2rem;
+   }
+
+   .contact-info ul li {
+      font-size: 0.9rem;
+   }
+}
+
+@media (max-width: 1024px) {
+   #Horaires {
+      flex-direction: column;
+      align-items: center;
+      
+   }
+
+   #Horaires article {
+      width: 50%;
+      margin: 1em 0;
+      height: auto;
+   }
+
+   #Horaires h1 {
+      font-size: 50px;
+   }
+
+   #Horaires h3 {
+      align-items: center;
+      font-size: 1.5rem;
+   }
+
+   #Horaires p {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+   }
 }
