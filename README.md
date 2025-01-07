@@ -20,8 +20,8 @@ Vous pourrez trouver les consignes sur le lien suivant, attention site potentiel
 Pour la maquette figma, nous avons utilisé **Dribbble** pour trouver de l'inspiration et nous nous sommes orientés sur les idées suivantes :
 
 - **Idées :**
-  - Restaurant gastronomique
-  - Provencal
+  - Restaurant
+  - Provence
 - **Sources :**
   - [Dribbble](https://dribbble.com)
 
@@ -34,12 +34,12 @@ Pour la programmation de notre site web, nous utilisons `HTML` & `css`. Le code 
 
 ```bash
     . TPWeb
-    └── assets/
+    └── assets/               # dossier qui comporte tout les assets
     |     └── flavicon.ico
-    └── index.html
-    └── main.js
-    └── style.css
-    └── README.md
+    └── index.html            # code source
+    └── main.js               # fichier de manipulation du DOM
+    └── style.css             # style du site web
+    └── README.md             # documentation du projet
 ```
 
 On se permet de ne pas afficher les dossiers et fichiers cachés.
