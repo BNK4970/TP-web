@@ -382,10 +382,10 @@ nav ul li a:hover {
    justify-content: center;
    border: 1px solid var(--maronclair);
    border-radius: 10px;
-   background-color: var(--jaune);
+   background-color: var(--jauneF);
    padding: 0.5em 1em;
    transition: all 0.3s;
-   width: 130px;
+   width: 160px;
 }
 
 #NosServices figcaption {
@@ -437,7 +437,7 @@ nav ul li a:hover {
    background-color: var(--jaune);
    padding: 0.5em 1em;
    transition: all 0.3s;
-   width: 130px;
+   width: 160px;
 }
 
 #Payement figcaption {
