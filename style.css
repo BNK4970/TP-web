@@ -639,14 +639,14 @@ form textarea {
    list-style: none;
 }
 
-#map {
+#reservation a {
    color: #5a5a5a;
    text-decoration: none;
    color: none;
    list-style: none;
 }
 
-#map:hover {
+#reservation a:hover {
    cursor: pointer;
    text-decoration: underline;
    color: blue;
