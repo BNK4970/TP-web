@@ -183,32 +183,33 @@
    <section id="reservation">
       <h1>Réservation</h1>
       <article class="reservation-form">
-         <form>
+         <form action="mailto:
+         abysse@alwaysdata.net 
+         " >
             <legend>
                Reserver dès maintenant et laissez la Provence eveiller vos
                sens
             </legend>
             <label for="prenom">Prénom :</label>
             <label for="nom">Nom :</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
-            <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+            <input type="text" id="prenom" name="prenom" required />
+            <input type="text" id="nom" name="nom"  required />
 
             <label for="email">Email :</label>
-            <input type="email" id="email" name="email" placeholder="Votre email" required />
+            <input type="email" id="email" name="email" required />
 
             <label for="telephone">Téléphone :</label>
-            <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone" />
+            <input type="tel" id="telephone" name="telephone" />
 
             <label for="personne">Personne :</label>
             <label for="date">Date :</label>
-            <input type="number" id="personne" name="personne" min="1" max="10" placeholder="Nombre de personnes"
-               required />
+            <input type="number" id="personne" name="personne" min="1" max="10" required />
             <input type="date" id="date" name="date" required />
 
             <label for="message">Message :</label>
             <textarea id="message" name="message" placeholder="Écrivez votre message ici ..."></textarea>
 
-            <input id="confirmation" type="submit" value="Reserver" />
+            <input id="confirmation" type="submit" value="Réserver" />
          </form>
       </article>
       <aside class="contact-info">

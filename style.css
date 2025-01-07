@@ -82,7 +82,7 @@ nav ul li a:hover {
    text-decoration: underline;
 }
 
-button.btn-reserver a {
+.btn-reserver  {
    text-decoration: none;
    background: transparent;
    color: var(--violet);
@@ -92,7 +92,7 @@ button.btn-reserver a {
    border: 1px solid var(--violet);
 }
 
-button.btn-reserver a:hover {
+.btn-reserver:hover {
    background-color: #513c86;
    color: white;
 }
@@ -134,7 +134,7 @@ button.btn-reserver a:hover {
    margin: 0 0 20px;
 }
 
-button.btn-specialite {
+.btn-specialite {
    text-decoration: none; /* Supprimer le soulignement du lien (si c'est une ancre) */
    background: transparent;
    color: var(--violet);
@@ -143,16 +143,16 @@ button.btn-specialite {
    font-size: 20px;
    border: 1px solid var(--violet);
 }
-button.btn-specialite:hover {
+.btn-specialite:hover {
    background-color: #513c86;
 }
 
-button.btn-specialite a {
+.btn-specialite a {
    text-decoration: none;
 }
 
-button.btn-specialite a:hover {
-   color: white;
+#hero a:hover {
+   color: rgb(255, 255, 255);
 }
 
 #Apropos {
