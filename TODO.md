@@ -1,8 +1,6 @@
-- ajouter un lien vers un site web
 - formulaire -> mail
 - video
 - encrage home
 - changer de feuille de style js
 - responsive
-- architecture projet
 - validation w3c
