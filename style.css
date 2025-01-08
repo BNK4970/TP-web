@@ -695,6 +695,7 @@ form #confirmation {
 form #confirmation:hover {
    background-color: #513c86;
    color: white;
+   cursor: pointer;
 }
 
 footer {
