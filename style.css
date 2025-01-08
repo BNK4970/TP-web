@@ -97,6 +97,35 @@ nav ul li a:hover {
    color: white;
 }
 
+#home {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+   cursor: pointer;
+   z-index: 10000;
+   opacity: 0.9;
+}
+#home img {
+   height: 100px;
+   width: 100px;
+   border-radius: 50%;
+   background-color: var(--jaune);
+   border: solid rgba(0, 0, 0, 0.5) 0.5px;
+
+}
+
+#home:hover {
+   scale: 1.1;
+   transition: all 0.5s;
+   opacity: 1;
+   border-radius: 50%;
+}
+
+
+
 #hero {
    height: 100vh;
    background: url("assets/restaurant.jpeg");
