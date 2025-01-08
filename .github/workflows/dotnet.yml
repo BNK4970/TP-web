@@ -1,12 +1,12 @@
-name: Déployer le site sur Alwaysdata
+name: Connexion SSH à Alwaysdata
 
 on:
   push:
     branches:
-      - main
+      - main  # Déclenche le workflow sur les pushs vers la branche 'main'
 
 jobs:
-  deploy:
+  connect:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,10 +15,10 @@ jobs:
 
       - name: Set up SSH
         run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > id_ed25519
-          chmod 600 id_ed25519
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
           eval $(ssh-agent -s)
           ssh-add id_ed25519
 
-      - name: Deploy to Alwaysdata
-        run: ssh -o StrictHostKeyChecking=no abysse@ssh-abysse.alwaysdata.net 'cd ~/www/TP-web && git pull origin main'
+      - name: Connexion SSH à Alwaysdata
+        run: ssh -o StrictHostKeyChecking=no abysse@ssh-abysse.alwaysdata.net
