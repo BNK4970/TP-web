@@ -1,26 +1,54 @@
 <?php
-// Secret partagé pour vérifier l'authenticité du webhook
-$secret = 'abysse';
+// Configuration
+$secret = 'votre_secret_webhook'; // Le secret défini dans le webhook GitHub
+$repoPath = '/chemin/complet/vers/www/TP-web'; // Chemin du dépôt Git
+$logFile = '/chemin/complet/vers/logs/webhook.log'; // Chemin vers le fichier de log
+$updateScript = '/chemin/complet/vers/update.sh'; // Chemin vers le script de mise à jour
 
-// Récupérer le contenu brut de la requête
+// Lire le contenu brut de la requête
 $payload = file_get_contents('php://input');
-$headers = getallheaders();
 
-// Vérifier la signature du webhook
-if (isset($headers['X-Hub-Signature-256'])) {
+// Vérifier que la signature est correcte (sécurisation du webhook)
+if (isset($_SERVER['HTTP_X_HUB_SIGNATURE_256'])) {
     $signature = 'sha256=' . hash_hmac('sha256', $payload, $secret);
-    if ($signature !== $headers['X-Hub-Signature-256']) {
-        http_response_code(403); // Refuser l'accès si la signature est incorrecte
-        error_log(date('[Y-m-d H:i:s]') . " : Signature invalide\n", 3, '/home/<utilisateur>/logs/webhook.log');
+    if (!hash_equals($signature, $_SERVER['HTTP_X_HUB_SIGNATURE_256'])) {
+        http_response_code(403);
+        file_put_contents($logFile, date('[Y-m-d H:i:s] ') . "Signature invalide\n", FILE_APPEND);
         exit('Signature invalide');
     }
+} else {
+    http_response_code(400);
+    file_put_contents($logFile, date('[Y-m-d H:i:s] ') . "Signature absente\n", FILE_APPEND);
+    exit('Signature absente');
 }
 
-// Exécuter le script de mise à jour
-$output = shell_exec('/home/abysse/update.sh 2>&1'); // Lancer le script
-http_response_code(200); // Répondre avec succès
-echo "Mise à jour effectuée.";
+// Décoder le payload JSON
+$data = json_decode($payload, true);
 
-// Enregistrer dans les logs
-file_put_contents('/home/abysse/logs/webhook.log', date('[Y-m-d H:i:s]') . " : Webhook reçu, résultat : $output\n", FILE_APPEND);
+// Vérifier qu'il s'agit d'un push sur la branche main
+if (isset($data['ref']) && $data['ref'] === 'refs/heads/main') {
+    // Log de réception de l'événement
+    file_put_contents($logFile, date('[Y-m-d H:i:s] ') . "Push détecté sur la branche main\n", FILE_APPEND);
+
+    // Exécuter le script de mise à jour
+    $output = [];
+    $status = 0;
+    exec("bash $updateScript 2>&1", $output, $status);
+
+    // Log des résultats
+    file_put_contents($logFile, date('[Y-m-d H:i:s] ') . "Mise à jour : Status $status\n" . implode("\n", $output) . "\n", FILE_APPEND);
+
+    if ($status === 0) {
+        http_response_code(200);
+        echo "Mise à jour réussie.\n";
+    } else {
+        http_response_code(500);
+        echo "Erreur lors de la mise à jour.\n";
+    }
+} else {
+    // Log pour les événements non pertinents
+    file_put_contents($logFile, date('[Y-m-d H:i:s] ') . "Événement ignoré (pas un push sur main)\n", FILE_APPEND);
+    http_response_code(200);
+    echo "Aucun déploiement nécessaire.\n";
+}
 ?>
