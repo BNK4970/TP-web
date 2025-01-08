@@ -12,20 +12,12 @@ jobs:
     steps:
     # Étape 1 : Vérifier le code du dépôt
     - name: Checkout code
-      uses: actions/checkout@v2
-
-    # Étape 2 : Configurer SSH
-    - name: Set up SSH key
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.ALWAYSDATA_SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -t rsa ssh-abysse.alwaysdata.net >> ~/.ssh/known_hosts
-
+      uses: actions/checkout@v2$
+      
     # Étape 3 : Connecter et déployer
     - name: Deploy to AlwaysData
       run: |
-        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no abysse@ssh-abysse.alwaysdata.net << 'EOF'
+        ssh abysse@ssh-abysse.alwaysdata.net
+        echo "${{ secrets.ALWAYSDATA_SSH_KEY }}"
         cd ~/www/TP-web
         git pull origin main
-        EOF
