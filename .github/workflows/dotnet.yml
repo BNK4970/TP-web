@@ -12,7 +12,7 @@ jobs:
     steps:
     # Étape 1 : Vérifier le code du dépôt
     - name: Checkout code
-      uses: actions/checkout@v2$
+      uses: actions/checkout@v2
       
     # Étape 3 : Connecter et déployer
     - name: Deploy to AlwaysData
