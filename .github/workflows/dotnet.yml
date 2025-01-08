@@ -13,11 +13,20 @@ jobs:
     # Étape 1 : Vérifier le code du dépôt
     - name: Checkout code
       uses: actions/checkout@v2
-      
+
+    # Étape 2 : Configurer SSH
+    - name: Set up SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "$ALWAYSDATA_SSH_KEY" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        ssh-keyscan -t ed25519 ssh-abysse.alwaysdata.net >> ~/.ssh/known_hosts
+
     # Étape 3 : Connecter et déployer
     - name: Deploy to AlwaysData
       run: |
-        ssh abysse@ssh-abysse.alwaysdata.net
-        ${{ secrets.ALWAYSDATA_SSH_KEY }}
+        ssh -i ~/.ssh/id_ed25519 abysse@ssh-abysse.alwaysdata.net << 'EOF'
         cd ~/www/TP-web
         git pull origin main
+        # Vous pouvez ajouter d'autres commandes de déploiement ici
+        EOF
