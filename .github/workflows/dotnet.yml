@@ -3,7 +3,7 @@ name: Déployer le site sur Alwaysdata
 on:
   push:
     branches:
-      - main
+      - main  # Le workflow se déclenchera à chaque changement sur la branche main
 
 jobs:
   deploy:
@@ -13,5 +13,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Deploy to Alwaysdata
-        run: ssh -o StrictHostKeyChecking=no abysse@ssh-abysse.alwaysdata.net 'cd ~/www/TP-web && git pull origin main'
+      - name: Configurer la clé SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          # Ajouter l'hôte Alwaysdata à la liste des hôtes connus pour éviter les messages de sécurité
+          ssh-keyscan -H ssh-abysse.alwaysdata.net >> ~/.ssh/known_hosts
+
+      - name: Déployer sur Alwaysdata
+        run: |
+          ssh -o StrictHostKeyChecking=no abysse@ssh-abysse.alwaysdata.net 'cd ~/www/TP-web && git pull origin main'
