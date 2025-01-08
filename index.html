@@ -58,23 +58,26 @@
          </p>
       </section>
       <section id="Galerie">
-         <h3>galerie</h3>
+         <h1>galerie</h2>
          <p>
             Découvrez l’essence de la Provence à travers des œuvres
             d’art et d’artisanat inspirés par sa lumière et ses
             paysages.
          </p>
-         <video src=""> </video>
+         <video controls>
+            <source src="./assets/video-cuisine.webm" type="video/webm">
+            <source src="./assets/video-cuisine.mp4" type="video/mp4">
+         </video>
          <figure>
-            <img src="./assets/Cprovencale.jpg" alt="Chef Provençale" />
+            <img src="./assets/chef.webp" alt="" />
             <figcaption>Cheffe Provençale</figcaption>
          </figure>
          <figure>
-            <img src="./assets/Aprovencale.jpg" alt="Ambiance Provençale" />
+            <img src="./assets/table.webp" alt="" />
             <figcaption>Ambiance Provençale</figcaption>
          </figure>
          <figure>
-            <img src="./assets/Pprovencale.jpg" alt="Paysage Provençale" />
+            <img src="./assets/champ.webp" alt="" />
             <figcaption>Paysage Provençal</figcaption>
          </figure>
       </section>
@@ -86,7 +89,7 @@
             paysages.
          </p>
          <section>
-            <img src="./assets/creme.jpg" alt="Chef Provençale" />
+            <img loading="lazy" width="640" height="360" src="./assets/creme.webp" alt="" />
             <h2>Crème brûlée à la fleur d’oranger</h2>
             <p>Un classique revisité avec une touche provençale :
                notre crème brûlée associe la douceur de sa texture
@@ -97,7 +100,7 @@
             </p>
          </section>
          <section>
-            <img src="./assets/daube.jpg" alt="Ambiance Provençale" />
+            <img loading="lazy" width="640" height="360" src="./assets/daube.webp" alt="" />
             <h2>La daube provençale</h2>
             <p>Un plat emblématique de la Provence, mijoté avec
                passion. La daube provençale marie des morceaux de bœuf
@@ -107,7 +110,7 @@
                saveurs du terroir.</p>
          </section>
          <section>
-            <img src="./assets/ratatouille.jpg" alt="Paysage Provençale" />
+            <img loading="lazy" width="640" height="360" src="./assets/ratatouille.webp" alt="" />
             <h2>La ratatouille maison</h2>
             <p>Un festival de légumes méditerranéens soigneusement
                préparés : courgettes, aubergines, poivrons et tomates,
@@ -259,19 +262,19 @@
          <!-- Formulaire pour réserver une table -->
          <form action="">
             <label for="prenom">Prénom :</label>
-            <input name="prenom" type="text" required />
+            <input id="prenom" type="text" required autocomplete="true"/>
             <label for="nom">Nom :</label>
-            <input name="nom" type="text" required />
+            <input id="nom" type="text" required autocomplete="true"/>
             <label for="email">Email :</label>
-            <input name="email" type="email" required />
+            <input id="email" type="email" required autocomplete="true"/>
             <label for="tel">Téléphone :</label>
-            <input name="tel" type="number" required />
+            <input id="tel" type="number" required autocomplete="true"/>
             <label for="personne">Personne :</label>
-            <input name="personne" type="num" required />
+            <input id="personne" type="num" required />
             <label for="date">Date :</label>
-            <input name="date" type="datetime-local" required />
+            <input id="date" type="datetime-local" required />
             <label for="message">Message :</label>
-            <textarea name="message" id="" placeholder="Ecrivez votre message ici ..."></textarea>
+            <textarea id="message" id="" placeholder="Ecrivez votre message ici ..."></textarea>
             <input type="submit" value="Réserver" />
          </form>
       </section>
