@@ -6,12 +6,34 @@
    <meta name="title" content="Abysse" />
    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
    <meta name="description" content="Découvrez notre restaurant provencale !" />
+
+   <!-- Meta tags de base -->
+   <meta name="author" content="Abysse">
+   <meta name="description" content="Découvrez Abysse, un restaurant gastronomique situé à Aix-en-Provence. Savourez une cuisine d'exception, des produits locaux et une expérience culinaire unique dans un cadre raffiné.">
+   <meta name="keywords" content="restaurant gastronomique, restaurant étoilé, cuisine raffinée, Aix-en-Provence, gastronomie française, dîner gastronomique, chef étoilé">
+   <meta name="robots" content="index, follow">
+
+   <!-- Open Graph Meta Tags (pour Facebook, LinkedIn, etc.) -->
+   <meta property="og:title" content="Abysse - Restaurant Gastronomique à Aix-en-Provence">
+   <meta property="og:description" content="Découvrez une expérience culinaire exceptionnelle avec des plats raffinés et des saveurs uniques. Réservez dès maintenant !">
+   <meta property="og:image" content="[URL de l'image de présentation du restaurant]">
+   <meta property="og:url" content="https://abysse.alwaysdata.net">
+   <meta property="og:type" content="website">
+
+   <!-- Twitter Card Meta Tags -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="Abysse - Gastronomie à Aix-en-Provence">
+   <meta name="twitter:description" content="Vivez une expérience culinaire unique au cœur de Aix-en-Provence. Cuisine raffinée, ambiance chaleureuse. Réservez votre table !">
+   <meta name="twitter:image" content="./assets/restaurant.webp">
+
    <!-- Favicon -->
    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
    <!-- Titre de la page -->
    <title>ABYSSE</title>
    <!-- Style -->
    <link rel="stylesheet" href="./style.css" />
+   <!-- JavaScript -->
+    <script src="./main.js" defer></script>
 </head>
 
 <body>
@@ -19,15 +41,18 @@
       <!-- Titre -->
       <p><a href="#hero">abysse</a></p>
       <!-- Navigation -->
-      <nav>
+      <nav id="menu" hidden>
          <ul>
-            <li><a href="#hero">Accueil</a></li>
-            <li><a href="#APropos">À Propos</a></li>
-            <li><a href="#Galerie">Galerie</a></li>
-            <li><a href="#Specialite">Spécialité</a></li>
-            <li><a href="#Horaires">Horaires</a></li>
+            <li><a href="#hero" class="nav-item">Accueil</a></li>
+            <li><a href="#APropos" class="nav-item">À Propos</a></li>
+            <li><a href="#Galerie" class="nav-item">Galerie</a></li>
+            <li><a href="#Specialite" class="nav-item">Spécialité</a></li>
+            <li><a href="#Horaires" class="nav-item">Horaires</a></li>
          </ul>
       </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+         <svg class="hamburger" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+       </button>
    </header>
    <main>
       <!-- Section Héro -->
