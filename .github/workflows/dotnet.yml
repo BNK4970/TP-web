@@ -20,12 +20,18 @@ jobs:
         mkdir -p ~/.ssh
         echo "$ALWAYSDATA_SSH_KEY" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
+        # Ajouter la clé de l'hôte à known_hosts pour éviter les invites interactives
         ssh-keyscan -t ed25519 ssh-abysse.alwaysdata.net >> ~/.ssh/known_hosts
+        # Configurer SSH pour utiliser uniquement la clé privée id_ed25519
+        echo -e "Host ssh-abysse.alwaysdata.net\n  IdentityFile ~/.ssh/id_ed25519\n  StrictHostKeyChecking no\n" >> ~/.ssh/config
+        # Supprimer toutes les autres clés SSH actuellement chargées
+        ssh-add -D
 
     # Étape 3 : Connecter et déployer
     - name: Deploy to AlwaysData
       run: |
-        ssh -i ~/.ssh/id_ed25519 abysse@ssh-abysse.alwaysdata.net << 'EOF'
+        # Déployer en utilisant SSH
+        ssh -v -i ~/.ssh/id_ed25519 abysse@ssh-abysse.alwaysdata.net << 'EOF'
         cd ~/www/TP-web
         git pull origin main
         # Vous pouvez ajouter d'autres commandes de déploiement ici
