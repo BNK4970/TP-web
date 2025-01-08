@@ -25,6 +25,7 @@ button {
    all: unset;
    cursor: pointer;
 }
+
 html {
    scroll-behavior: smooth ;
    scroll-padding-top: 9vh;
@@ -53,18 +54,24 @@ p {
 header {
    display: flex;
    flex-direction: row;  
-   justify-content: space-between ;
+   align-items: center;
+   justify-content: start;
    background-color: var(--bg-clr) ;
-   padding: 25px 30px;
    z-index: 1000;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   padding: 0 20px;
    color:var(--violet);
    position: fixed;
    width: 100%;
    height: 80px;
+   position: relative;
    & nav {
       display: none;
    }
+}
+header::before {
+   width: 20px;
+   height: 20px;
+   background-color: red;
 }
 
 main {
@@ -87,13 +94,53 @@ section p,h1 {
    grid-column: 1/4;
    margin-bottom: 10px;
 }
+
 /* section hero */
 #hero {
    height: 100dvh;
    background-image: url(./assets/fondhero.jpeg);
    background-size: cover;
    background-position: center;
+   display: grid;
+   place-items: center left;
 }
+#hero article {
+   background-color: var(--bg-clr);
+   border-radius: var(--border-radius);
+   padding: 10px 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   width: fit-content;
+}
+#hero article a {
+   text-decoration: none;
+   border-radius: var(--border-radius);
+   border: 2px solid var(--title-clr);
+   padding: 10px 20px;
+   transition: all ease-in-out .3s;
+}
+#hero article a:hover {
+   background-color: var(--title-clr);
+   color: var(--bg-clr);
+   transition: all ease-in-out .3s;
+}
+
+/* section nos spécialités */
+#Specialite section {
+   margin: 0;
+   padding: 0;
+   background-color: transparent;
+}
+#Specialite section img {
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+   width: 100%;
+}
+#Specialite section p {
+   display: none;
+}
+
 /* section nos services */
 #NosServices {
    display: grid;
@@ -102,15 +149,36 @@ section p,h1 {
    grid-template-columns: repeat(3, minmax(100px, 150px));
 }
 
+/* section horaires*/
+#Horaires article {
+   border: 2px solid rgba(var(--border-clr), 1);
+   border-radius: var(--border-radius);
+   padding: 1em;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto auto;
+}
+#Horaires article h2 {
+   font-size: 16px;
+   font-family: 'poppins';
+   color: var(--text-clr);
+   text-transform: none;
+   font-weight: normal;
+   grid-row: 1/3;
+   grid-column: 1/2;
+   align-self: center;
+}
+#Horaires article p {
+   grid-row: 1/3;
+   grid-column: 2/3;
+}
+
 /* section payment */
 #Payement {
    display: grid;
    grid-template-columns: repeat(3, minmax(100px, 150px));
    column-gap: 15px;
    grid-template-rows: auto, auto, 1fr;
-}
-#Payement figure {
-   
 }
 
 #Reservation form {

@@ -1,4 +1,3 @@
-- formulaire -> mail
 - video
 - encrage home
 - changer de feuille de style js
