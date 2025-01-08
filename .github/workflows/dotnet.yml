@@ -13,12 +13,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up SSH
-        run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > id_ed25519
-          chmod 600 id_ed25519
-          eval $(ssh-agent -s)
-          ssh-add id_ed25519
-
       - name: Deploy to Alwaysdata
         run: ssh -o StrictHostKeyChecking=no abysse@ssh-abysse.alwaysdata.net 'cd ~/www/TP-web && git pull origin main'
