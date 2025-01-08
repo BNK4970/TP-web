@@ -18,6 +18,6 @@ jobs:
     - name: Deploy to AlwaysData
       run: |
         ssh abysse@ssh-abysse.alwaysdata.net
-        echo "${{ secrets.ALWAYSDATA_SSH_KEY }}"
+        ${{ secrets.ALWAYSDATA_SSH_KEY }}
         cd ~/www/TP-web
         git pull origin main
