@@ -18,13 +18,14 @@ jobs:
     - name: Set up SSH key
       run: |
         mkdir -p ~/.ssh
-        echo "$ALWAYSDATA_SSH_KEY" > ~/.ssh/id_ed25519
+        echo "${{ secrets.ALWAYSDATA_SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
         ssh-keyscan -t ed25519 ssh-abysse.alwaysdata.net >> ~/.ssh/known_hosts
 
     # Étape 3 : Connecter et déployer
     - name: Deploy to AlwaysData
       run: |
-        ssh -i ~/.ssh/id_ed25519 abysse@ssh-abysse.alwaysdata.net << 'EOF'
+        ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no abysse@ssh-abysse.alwaysdata.net << 'EOF'
         cd ~/www/TP-web
         git pull origin main
+        EOF
