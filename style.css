@@ -519,6 +519,7 @@ nav ul li a:hover {
    height: auto;
    border: var(--maronclair) solid 1px;
    transition: transform 0.3s ease;
+   align-items: center;
 }
 
 #Horaires article:hover {
@@ -526,21 +527,19 @@ nav ul li a:hover {
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Effet de shadow au survol */
 }
 
-#Horaires h3 {
+#Horaires h2 {
    display: flex;
    font-size: 1.2em;
-   color: #6a4d87;
-   width: 50%;
-   align-items: center;
+   justify-content: flex-start;
+   width: 80%;
 }
 
 #Horaires article p {
-   display: flex;
    font-size: 1em;
    color: #333;
-   width: 50%;
    margin: 0;
-   align-items: center;
+   display: flex;
+   justify-content: flex-end;
 }
 
 #reservation {
