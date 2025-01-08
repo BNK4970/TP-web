@@ -102,7 +102,7 @@ nav ul li a:hover {
    align-items: center;
    justify-content: center;
    position: fixed;
-   right: 20px;
+   right: 0px;
    bottom: 20px;
    cursor: pointer;
    z-index: 1;
@@ -110,9 +110,9 @@ nav ul li a:hover {
 #home img {
    height: 90px;
    width: 90px;
-   border-radius: 50%;
-   background-color: var(--jaune);
+   background-color: rgba(128, 128, 128, 0.89);
    border: solid rgba(0, 0, 0, 0.5) 0.5px;
+   border-radius: 10% 0 0 10% ;
 
 }
 
@@ -235,7 +235,6 @@ nav ul li a:hover {
    background-color: var(--violet);
    border-radius: 10px;
    box-shadow: 0 8px 15px var(--maron);
-   z-index: 2;
 }
 
 #Galerie figure img {
@@ -521,7 +520,6 @@ nav ul li a:hover {
    border: var(--maronclair) solid 1px;
    transition: transform 0.3s ease;
    align-items: center;
-   z-index: 2;
 }
 
 #Horaires article:hover {
