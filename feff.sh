@@ -1,6 +1,6 @@
 <?php
 // Configuration
-$secret = 'votre_secret_webhook'; // Le secret défini dans le webhook GitHub
+$secret = 'abysse'; // Le secret défini dans le webhook GitHub
 $logFile = '/logs/webhook.log';   // Chemin vers le fichier de log
 $updateScript = '/update.sh';     // Chemin vers le script de mise à jour
 
