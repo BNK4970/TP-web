@@ -1,239 +1,329 @@
 <!DOCTYPE html>
 <html lang="fr">
-   <head>
-      <meta charset="UTF-8" />
-      <!-- Favicon -->
-      <link
-         rel="shortcut icon"
-         href="./assets/favicon.ico"
-         type="image/x-icon"
-      />
-      <!-- Meta -->
-      <meta
-         name="description"
-         content="Découvrez notre restaurant provençale !"
-      />
-      <!-- viewport meta tag -->
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <!-- Titre de la page -->
-      <title>ABYSSE</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rancho&display=swap"
-         rel="stylesheet"
-      />
-      <!-- Style -->
-      <link rel="stylesheet" href="./style.css" />
-   </head>
-   <body>
-      <header>
-         <p><a href="#hero">ABYSSE</a></p>
-         <!-- Navigation -->
-         <nav>
-            <ul>
-               <li><a href="#Apropos">À Propos</a></li>
-               <li><a href="#Galerie">Galerie</a></li>
-               <li><a href="#Specialite">Spécialités</a></li>
-               <li><a href="#Horaires">Horaires</a></li>
-            </ul>
-         </nav>
-         <!-- Bouton Réserver -->
-         <a class="btn-reserver" href="#reservation">Réserver</a>
-      </header>
-      <a id="home" href="#"><img src="./assets/home.png" alt="logo home" /></a>
+<!-- 
+ ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓███████▓▒░▒▓███████▓▒░▒▓████████▓▒░ 
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░     ░▒▓█▓▒░      ░▒▓█▓▒░        
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░     ░▒▓█▓▒░      ░▒▓█▓▒░        
+░▒▓████████▓▒░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓██████▓▒░░▒▓██████▓▒░   
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░          ░▒▓█▓▒░     ░▒▓█▓▒░▒▓█▓▒░        
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░          ░▒▓█▓▒░     ░▒▓█▓▒░▒▓█▓▒░        
+░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░   ░▒▓█▓▒░   ░▒▓███████▓▒░▒▓███████▓▒░░▒▓████████▓▒░ 
+Designé et développé par Cordovana Enzo & Panaiva Jérémi
+BUT Informatique première année à l'IUT d'Aix
+-->
+<head>
+   <meta charset="UTF-8" />
+   <meta name="title" content="Abysse" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+   <meta name="description" content="Découvrez notre restaurant provencale !" />
+
+   <!-- Meta tags de base -->
+   <meta name="author" content="Abysse">
+   <meta name="description" content="Découvrez Abysse, un restaurant gastronomique situé à Aix-en-Provence. Savourez une cuisine d'exception, des produits locaux et une expérience culinaire unique dans un cadre raffiné.">
+   <meta name="keywords" content="restaurant gastronomique, restaurant étoilé, cuisine raffinée, Aix-en-Provence, gastronomie française, dîner gastronomique, chef étoilé">
+   <meta name="robots" content="index, follow">
+
+   <!-- Open Graph Meta Tags (pour Facebook, LinkedIn, etc.) -->
+   <meta property="og:title" content="Abysse - Restaurant Gastronomique à Aix-en-Provence">
+   <meta property="og:description" content="Découvrez une expérience culinaire exceptionnelle avec des plats raffinés et des saveurs uniques. Réservez dès maintenant !">
+   <meta property="og:image" content="[URL de l'image de présentation du restaurant]">
+   <meta property="og:url" content="https://abysse.alwaysdata.net">
+   <meta property="og:type" content="website">
+
+   <!-- Twitter Card Meta Tags -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="Abysse - Gastronomie à Aix-en-Provence">
+   <meta name="twitter:description" content="Vivez une expérience culinaire unique au cœur de Aix-en-Provence. Cuisine raffinée, ambiance chaleureuse. Réservez votre table !">
+   <meta name="twitter:image" content="./assets/restaurant.webp">
+
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+   <!-- Titre de la page -->
+   <title>ABYSSE</title>
+   <!-- Style -->
+   <link id="stylesheet" rel="stylesheet" href="./style.css" />
+   <!-- JavaScript -->
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+   <header>
+      <!-- Titre -->
+      <p><a href="#hero">abysse</a></p>
+      <!-- Navigation -->
+      <nav id="menu" hidden>
+         <ul>
+            <li><a href="#hero" class="nav-item">Accueil</a></li>
+            <li><a href="#APropos" class="nav-item">À Propos</a></li>
+            <li><a href="#Galerie" class="nav-item">Galerie</a></li>
+            <li><a href="#Specialite" class="nav-item">Spécialité</a></li>
+            <li><a href="#Horaires" class="nav-item">Horaires</a></li>
+         </ul>
+      </nav>
+      <!-- lien pour aller à la section reserver -->
+      <a id="btn-reserver" href="#Reservation">Réserver</a>
+      <!-- hamburgeur -->
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+         <svg class="hamburger" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+       </button>
+   </header>
+
+   <!-- lien pour revenir tout en haut du site -->
+   <a id="home" href="#hero" aria-label="Scroll to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up"><path d="m18 15-6-6-6 6"/></svg>
+   </a>
+   <!-- liens pour aller à la section reserver -->
+   <a id="reserver" href="#Reservation">Réserver</a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up"><path d="m18 15-6-6-6 6"/></svg>
+   </a>
+   <main>
       <!-- Section Héro -->
       <section id="hero">
          <article>
-            <h1>LA PROVENCE ENTRE VOS MAINS</h1>
+            <h1 id="btnMagique">La provence entre vos mains</h1>
             <p>
                Vivez la Provence authentique, entre saveurs,<br />
                art et convivialité
             </p>
-            <a class="btn-specialite" href="#Specialite">Nos spécialités</a>
+            <a href="#Specialite">Nos spécialités</a>
          </article>
       </section>
-      <section id="Apropos">
-         <h1>À PROPOS</h1>
+      <section id="APropos">
+         <h1>à propos</h1>
          <p>
-            Decouvrez l'essence de la Provence dans notre restaurant chaleureux,
-            ou authenticité et saveurs méditerranéennes se rencontrent. Nos
-            plats, préparés avec des produits frais du terroir, célèbrent des
-            classiques comme la ratatouille, la daube provençale et la crème
-            brulee a la fleur d'oranger. Accompagnez votre repas d'un verre de
-            vin local, soigneusement. sélectionné pour sublimer chaque bouchée.
-            Que ce soit sous le chant des cigales en terrasse ou dans une
-            ambiance intimiste, vivez un moment de pure convivialité provençale.
-            Savourez la Provence à chaque instant.
+            Découvrez l’essence de la Provence dans notre restaurant
+            chaleureux, où authenticité et saveurs méditerranéennes se
+            rencontrent. Nos plats, préparés avec des produits frais du
+            terroir, célèbrent des classiques comme la ratatouille, la
+            daube provençale et la crème brûlée à la fleur d’oranger.
+            <br />
+            Accompagnez votre repas d’un verre de vin local,
+            soigneusement sélectionné pour sublimer chaque bouchée. Que
+            ce soit sous le chant des cigales en terrasse ou dans une
+            ambiance intimiste, vivez un moment de pure convivialité
+            provençale. Savourez la Provence à chaque instant.
          </p>
       </section>
       <section id="Galerie">
-         <h1>Galerie</h1>
-         <figure id="C">
-            <img src="./assets/Cprovencale.jpg" alt="Chef Provençale" />
+         <h1>galerie</h2>
+         <p>
+            Découvrez l’essence de la Provence à travers des œuvres
+            d’art et d’artisanat inspirés par sa lumière et ses
+            paysages.
+         </p>
+         <video controls=>
+            <source src="./assets/video-cuisine.webm" type="video/webm">
+            <source src="./assets/video-cuisine.mp4" type="video/mp4">
+         </video>
+         <figure>
+            <img src="./assets/chef.webp" alt="" />
             <figcaption>Cheffe Provençale</figcaption>
          </figure>
-         <figure id="A">
-            <img src="./assets/Aprovencale.jpg" alt="Ambiance Provençale" />
+         <figure>
+            <img src="./assets/table.webp" alt="" />
             <figcaption>Ambiance Provençale</figcaption>
          </figure>
-         <figure id="P">
-            <img src="./assets/Pprovencale.jpg" alt="Paysage Provençale" />
+         <figure>
+            <img src="./assets/champ.webp" alt="" />
             <figcaption>Paysage Provençal</figcaption>
          </figure>
-         <p>
-            Découvrez l'essence de la Provence à travers des œuvres d'art et
-            d'artisanat inspirés par sa lumière et ses paysages.
-         </p>
       </section>
       <section id="Specialite">
-         <h1>NOS SPÉCIALITÉS</h1>
-         <p id="intro">
-            Découvrez l'essence de la Provence à travers des œuvres d'art et
-            d'artisanat inspirés par sa lumière et ses paysages.
+         <h1>nos spécialités</h1>
+         <p>
+            Découvrez l’essence de la Provence à travers des œuvres
+            d’art et d’artisanat inspirés par sa lumière et ses
+            paysages.
          </p>
-         <article>
-            <img
-               src="./assets/creme.jpg"
-               alt="Crème brûlée à la fleur d'oranger"
-            />
-            <section>
-               <h2>Crème brûlée à la fleur d'oranger</h2>
-               <p>
-                  Un classique revisité avec une touche provençale : notre crème
-                  brûlée associe la douceur de sa texture veloutée aux arômes
-                  subtils et floraux de la fleur d'oranger. Sous une croûte de
-                  caramel doré, chaque bouchée offre un équilibre parfait entre
-                  délicatesse et gourmandise.
-               </p>
-            </section>
-         </article>
-         <article id="daube">
-            <img src="./assets/daube.jpg" alt="La daube provençale" />
-            <section>
-               <h2>La daube provençale</h2>
-               <p>
-                  Un plat emblématique de la Provence, mijoté avec passion. La
-                  daube provençale marie des morceaux de bœuf tendre, des
-                  légumes gorgés de soleil et des herbes aromatiques locales, le
-                  tout cuit lentement dans un vin rouge corsé. Un festin
-                  réconfortant qui évoque les saveurs du terroir.
-               </p>
-            </section>
-         </article>
-         <article>
-            <img src="./assets/ratatouille.jpg" alt="La ratatouille maison" />
-            <section>
-               <h2>La ratatouille maison</h2>
-               <p>
-                  Un festival de légumes méditerranéens soigneusement préparés :
-                  courgettes, aubergines, poivrons et tomates mijotés à la
-                  perfection avec de l'huile d'olive et des herbes de Provence.
-                  Une explosion de saveurs estivales dans chaque bouchée !
-               </p>
-            </section>
-         </article>
+         <section>
+            <img loading="lazy" width="640" height="160" src="./assets/creme.webp" alt="" />
+            <h2>Crème brûlée à la fleur d’oranger</h2>
+            <p>Un classique revisité avec une touche provençale :
+               notre crème brûlée associe la douceur de sa texture
+               veloutée aux arômes subtils et floraux de la fleur
+               d’oranger. Sous une croûte de caramel doré, chaque
+               bouchée offre un équilibre parfait entre délicatesse et
+               gourmandise.
+            </p>
+         </section>
+         <section>
+            <img loading="lazy" width="640" height="160" src="./assets/daube.webp" alt="" />
+            <h2>La daube provençale</h2>
+            <p>Un plat emblématique de la Provence, mijoté avec
+               passion. La daube provençale marie des morceaux de bœuf
+               tendre, des légumes gorgés de soleil et des herbes
+               aromatiques locales, le tout cuit lentement dans un vin
+               rouge corsé. Un festin réconfortant qui évoque les
+               saveurs du terroir.</p>
+         </section>
+         <section>
+            <img loading="lazy" width="640" height="160" src="./assets/ratatouille.webp" alt="" />
+            <h2>La ratatouille maison</h2>
+            <p>Un festival de légumes méditerranéens soigneusement
+               préparés : courgettes, aubergines, poivrons et tomates,
+               parfumés de thym et de romarin. Notre ratatouille maison
+               est un hommage aux champs ensoleillés de Provence,
+               servie avec authenticité et fraîcheur.
+            </p>
+         </section>
       </section>
+      <!-- ok -->
       <section id="NosServices">
          <h1>Nos Services</h1>
          <p>
-            Profitez d'un accueil chaleureux et d'une expérience soignée dans un
-            cadre enchanteur.
+            Profitez d'un accueil chaleureux et d'une expérience soignée
+            dans un cadre enchanteur.
          </p>
          <figure>
-            <img src="./assets/logo/parking.png" alt="logo_parking" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               class="lucide lucide-accessibility">
+               <circle cx="16" cy="4" r="1" />
+               <path d="m18 19 1-7-6 1" />
+               <path d="m5 8 3-3 5.5 3-2.36 3.5" />
+               <path d="M4.24 14.5a5 5 0 0 0 6.88 6" />
+               <path d="M13.76 17.5a5 5 0 0 0-6.88-6" />
+            </svg>
+            <figcaption>Accessibilité pmr</figcaption>
+         </figure>
+         <figure>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               class="lucide lucide-gem">
+               <path d="M6 3h12l4 6-10 13L2 9Z" />
+               <path d="M11 3 8 9l4 13 4-13-3-6" />
+               <path d="M2 9h20" />
+            </svg>
+            <figcaption>Réceptions de mariage</figcaption>
+         </figure>
+         <figure>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               class="lucide lucide-air-vent">
+               <path d="M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+               <path d="M6 8h12" />
+               <path d="M18.3 17.7a2.5 2.5 0 0 1-3.16 3.83 2.53 2.53 0 0 1-1.14-2V12" />
+               <path d="M6.6 15.6A2 2 0 1 0 10 17v-5" />
+            </svg>
+            <figcaption>Climatisation</figcaption>
+         </figure>
+         <figure>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               class="lucide lucide-car">
+               <path
+                  d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+               <circle cx="7" cy="17" r="2" />
+               <path d="M9 17h6" />
+               <circle cx="17" cy="17" r="2" />
+            </svg>
             <figcaption>Parking</figcaption>
          </figure>
          <figure>
-            <img src="./assets/logo/wifi.png" alt="logowifi" />
-            <figcaption>Wifi</figcaption>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               class="lucide lucide-party-popper">
+               <path d="M5.8 11.3 2 22l10.7-3.79" />
+               <path d="M4 3h.01" />
+               <path d="M22 8h.01" />
+               <path d="M15 2h.01" />
+               <path d="M22 20h.01" />
+               <path
+                  d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10" />
+               <path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17" />
+               <path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7" />
+               <path
+                  d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z" />
+            </svg>
+            <figcaption>Evénements privés</figcaption>
          </figure>
          <figure>
-            <img src="./assets/logo/terasse.png" alt="terrasse" />
-            <figcaption>Terrasse</figcaption>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               class="lucide lucide-wifi">
+               <path d="M12 20h.01" />
+               <path d="M2 8.82a15 15 0 0 1 20 0" />
+               <path d="M5 12.859a10 10 0 0 1 14 0" />
+               <path d="M8.5 16.429a5 5 0 0 1 7 0" />
+            </svg>
+            <figcaption>Wi-Fi gratuit</figcaption>
          </figure>
       </section>
       <section id="Payement">
-         <h1>Paiement</h1>
-         <p>Une expérience sans soucis pour que seul le plaisir compte</p>
+         <h1>Payement</h1>
+         <p>Une expérience sans soucis pour que seul le plaisir
+            compte</p>
          <figure>
-            <img src="./assets/logo/carte.png" alt="logo_parking" />
-            <figcaption>Carte</figcaption>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               class="lucide lucide-banknote">
+               <rect width="20" height="12" x="2" y="6" rx="2" />
+               <circle cx="12" cy="12" r="2" />
+               <path d="M6 12h.01M18 12h.01" />
+            </svg>
+            <figcaption>Espèce</figcaption>
          </figure>
          <figure>
-            <img src="./assets/logo/sanscontact.png" alt="logowifi" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               class="lucide lucide-smartphone-nfc">
+               <rect width="7" height="12" x="2" y="6" rx="1" />
+               <path d="M13 8.32a7.43 7.43 0 0 1 0 7.36" />
+               <path d="M16.46 6.21a11.76 11.76 0 0 1 0 11.58" />
+               <path d="M19.91 4.1a15.91 15.91 0 0 1 .01 15.8" />
+            </svg>
             <figcaption>Sans contact</figcaption>
          </figure>
          <figure>
-            <img src="./assets/logo/logo-espèce.png" alt="terrasse" />
-            <figcaption>Espèce</figcaption>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               class="lucide lucide-credit-card">
+               <rect width="20" height="14" x="2" y="5" rx="2" />
+               <line x1="2" x2="22" y1="10" y2="10" />
+            </svg>
+            <figcaption>Carte</figcaption>
          </figure>
       </section>
       <section id="Horaires">
          <h1>Horaires</h1>
-         <p>Quand la Provence s’éveille, nos portes s’ouvrent pour vous.</p>
+         <p>Quand la Provence s'éveille, nos portes s'ouvrent pour vous.</p>
          <article>
-            <h2>Lundi - Mardi</h2>
-            <p>
-               11:30 - 13:30
-               <br />
-               19:30 - 21:30
-            </p>
+            <h2>Lundu - Mardi</h2>
+            <p>11:30 - 13:30</p>
+            <p>19:30 - 21:30</p>
          </article>
          <article>
-            <h2>Mercredi-Dimanche</h2>
+            <h2>Mercredi</h2>
             <p>Nous sommes fermés</p>
          </article>
          <article>
-            <h2>Jeudi - Samedi</h2>
-            <p>
-               11:30 - 13:30
-               <br />
-               19:30 - 21:30
-            </p>
+            <h2>Jeudi - Vendredi</h2>
+            <p>11:30 - 13:30</p>
+            <p>19:30 - 21:30</p>
          </article>
       </section>
-      <section id="reservation">
+      <section id="Reservation">
          <h1>Réservation</h1>
-            <form class="reservation-form" action="mailto:abysse@alwaysdata.net" method="POST" enctype="text/plain>
-               <fieldset>
-               <legend>
-                  Reserver dès maintenant et laissez la Provence eveiller vos
-                  sens
-               </legend>
-               <label for="prenom">Prénom :</label>
-               <label for="nom">Nom :</label>
-               <input type="text" id="prenom" name="prenom" required />
-               <input type="text" id="nom" name="nom" required />
-
-               <label for="email">Email :</label>
-               <input type="email" id="email" name="email" required />
-
-               <label for="telephone">Téléphone :</label>
-               <input type="tel" id="telephone" name="telephone" />
-
-               <label for="personne">Personne :</label>
-               <label for="date">Date :</label>
-               <input
-                  type="number"
-                  id="personne"
-                  name="personne"
-                  min="1"
-                  max="10"
-                  required
-               />
-               <input type="date" id="date" name="date" required />
-
-               <label for="message">Message :</label>
-               <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Écrivez votre message ici ..."
-               ></textarea>
-
-               <input id="confirmation" type="submit" value="Réserver" />
-            </fieldset>
-            </form>
+         <p>Réservez dès maintenant et laissez la Provence éveiller vos
+            sens.</p>
+         <!-- Formulaire pour réserver une table -->
+         <form action="mailto:abysse.alwaysdata.net">
+            <label for="prenom">Prénom :</label>
+            <input id="prenom" type="text" name="prenom" required autocomplete="true"/>
+            <label for="nom">Nom :</label>
+            <input id="nom" type="text" name="nom" required autocomplete="true"/>
+            <label for="email">Email :</label>
+            <input id="email" type="email" name="email" required autocomplete="true"/>
+            <label for="tel">Téléphone :</label>
+            <input id="tel" type="tel" name="tel" required autocomplete="true"/>
+            <label for="personne">Personne :</label>
+            <input id="personne" min="1" max="10" type="num" name="personne" required />
+            <label for="date">Date :</label>
+            <input id="date" type="datetime-local" name="date" required />
+            <label for="message">Message :</label>
+            <textarea id="message" id="" placeholder="Ecrivez votre message ici ..."></textarea>
+            <input type="submit" value="Réserver" />
+         </form>
          <aside class="contact-info">
             <h2>
                Une question, une réservation, ou simplement envie de nous dire
@@ -243,7 +333,7 @@
                Contactez-nous et laissez-nous vous accompagner dans votre
                expérience provençale. Que ce soit par téléphone, email ou via
                notre formulaire, nous sommes à votre écoute pour répondre à vos
-               besoins.<br /><br />
+               besoins.<br/>
                À très bientôt chez Abysse !
             </p>
             <ul>
@@ -262,8 +352,11 @@
             </ul>
          </aside>
       </section>
-      <footer>
-         <p>&copy;2024 Abysse. Tous droits réservés.</p>
-      </footer>
-   </body>
+   </main>
+   <footer>
+      <h1>Abysse</h1>
+      <p>© 2024 Abysse. Tous droits réservés.</p>
+   </footer>
+</body>
+
 </html>

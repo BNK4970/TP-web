@@ -1,13 +1,12 @@
-# Licence de Partage des Revenus (Revenue-Sharing License)
+# Licence
 
-Cette licence régit l'utilisation de l'œuvre suivante : [Nom de l'œuvre].  
+Cette licence régit l'utilisation de l'œuvre suivante : Abysse.  
 Les titulaires des droits d'auteur sont : **CORDOVANA Enzo** & **PANAIVA Jérémy**.
 
 ## 1. Permissions
 - Vous êtes libre de copier, distribuer et modifier cette œuvre, à condition que :
   - Les créateurs originaux soient crédités de manière claire (nom, lien vers l'œuvre originale, etc.).
   - Toute modification ou œuvre dérivée respecte les mêmes termes que ceux de cette licence.
-- Si des groupes participent à ce travail pratique (TP), ils acceptent une réduction de **3 points** sur leur évaluation globale, ces 3 points étant attribués aux créateurs, en cas d'utilisation de cette œuvre à des fins commerciales. Cette condition s'ajoute à l'obligation de partage des revenus mentionnée dans la section 3.
 
 ## 2. Utilisation commerciale
 - L'utilisation commerciale de cette œuvre ou de ses dérivées est permise, **sous réserve du partage des revenus**, comme précisé dans la section 3.
