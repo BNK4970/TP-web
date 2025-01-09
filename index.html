@@ -105,13 +105,13 @@ BUT Informatique première année à l'IUT d'Aix
          </p>
       </section>
       <section id="Galerie">
-         <h1>galerie</h2>
+         <h1>galerie</h1>
          <p>
             Découvrez l’essence de la Provence à travers des œuvres
             d’art et d’artisanat inspirés par sa lumière et ses
             paysages.
          </p>
-         <video controls=>
+         <video controls>
             <source src="./assets/video-cuisine.webm" type="video/webm">
             <source src="./assets/video-cuisine.mp4" type="video/mp4">
          </video>
@@ -315,19 +315,19 @@ BUT Informatique première année à l'IUT d'Aix
          <!-- Formulaire pour réserver une table -->
          <form action="mailto:abysse.alwaysdata.net">
             <label for="prenom">Prénom :</label>
-            <input id="prenom" type="text" name="prenom" required autocomplete="true"/>
+            <input id="prenom" type="text" name="prenom" required autocomplete/>
             <label for="nom">Nom :</label>
-            <input id="nom" type="text" name="nom" required autocomplete="true"/>
+            <input id="nom" type="text" name="nom" required autocomplete/>
             <label for="email">Email :</label>
-            <input id="email" type="email" name="email" required autocomplete="true"/>
+            <input id="email" type="email" name="email" required autocomplete/>
             <label for="tel">Téléphone :</label>
-            <input id="tel" type="tel" name="tel" required autocomplete="true"/>
+            <input id="tel" type="tel" name="tel" required autocomplete/>
             <label for="personne">Personne :</label>
             <input id="personne" min="1" max="10" type="num" name="personne" required />
             <label for="date">Date :</label>
             <input id="date" type="datetime-local" name="date" required />
             <label for="message">Message :</label>
-            <textarea id="message" id="" placeholder="Ecrivez votre message ici ..."></textarea>
+            <textarea id="message" placeholder="Ecrivez votre message ici ..."></textarea>
             <input type="submit" value="Réserver" />
          </form>
          <aside class="contact-info">
