@@ -163,6 +163,10 @@ header a {
    aspect-ratio: 1/1;
 }
 
+#btnMagique {
+   cursor: pointer;
+}
+
 #reserver {
    z-index: 2;
    padding: 10px 20px;
@@ -368,7 +372,7 @@ h1 {
 #Specialite section {
    padding: 0;
    width: 100%;
-   aspect-ratio: 16/9;
+   height: auto;
    display: -ms-grid;
    display: grid;
    -ms-grid-columns: 1fr;
@@ -377,6 +381,12 @@ h1 {
    grid-template-rows: 1fr;
    border-radius: var(--border-radius);
    overflow: hidden;
+   box-shadow: 0 5px 5px var(--text-clr);
+}
+
+#Specialite section:hover {
+   scale: 1.05;
+   transition: all 1s;
 }
 
 #Specialite section h2 {
@@ -1279,7 +1289,6 @@ footer {
    }
 
    #Specialite section {
-      height: 320px;
       -ms-grid-rows: -webkit-min-content 20px -webkit-min-content;
       -ms-grid-rows: min-content 20px min-content;
       grid-template-rows: -webkit-min-content -webkit-min-content;
@@ -1487,3 +1496,4 @@ footer {
       font-size: 1.5rem;
       margin-bottom: 10px;
    }
+}
