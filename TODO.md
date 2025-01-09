@@ -1,5 +1,0 @@
-- video
-- encrage home
-- changer de feuille de style js
-- responsive
-- validation w3c

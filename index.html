@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-
+<!-- 
+ ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓███████▓▒░▒▓███████▓▒░▒▓████████▓▒░ 
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░     ░▒▓█▓▒░      ░▒▓█▓▒░        
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░     ░▒▓█▓▒░      ░▒▓█▓▒░        
+░▒▓████████▓▒░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓██████▓▒░░▒▓██████▓▒░   
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░          ░▒▓█▓▒░     ░▒▓█▓▒░▒▓█▓▒░        
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░          ░▒▓█▓▒░     ░▒▓█▓▒░▒▓█▓▒░        
+░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░   ░▒▓█▓▒░   ░▒▓███████▓▒░▒▓███████▓▒░░▒▓████████▓▒░ 
+Designé et développé par Cordovana Enzo & Panaiva Jérémi
+BUT Informatique première année à l'IUT d'Aix
+-->
 <head>
    <meta charset="UTF-8" />
    <meta name="title" content="Abysse" />
@@ -31,7 +41,7 @@
    <!-- Titre de la page -->
    <title>ABYSSE</title>
    <!-- Style -->
-   <link rel="stylesheet" href="./style.css" />
+   <link id="stylesheet" rel="stylesheet" href="./style.css" />
    <!-- JavaScript -->
     <script src="./main.js" defer></script>
 </head>
@@ -50,15 +60,25 @@
             <li><a href="#Horaires" class="nav-item">Horaires</a></li>
          </ul>
       </nav>
+      <!-- lien pour aller à la section reserver -->
+      <a id="btn-reserver" href="#Reservation">Réserver</a>
+      <!-- hamburgeur -->
       <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
          <svg class="hamburger" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
        </button>
    </header>
+
+   <!-- lien pour revenir tout en haut du site -->
+   <a id="home" href="#hero" aria-label="Revenir au début de la page"></a>
+   <!-- liens pour aller à la section reserver -->
+   <a id="reserver" href="#Reservation">Réserver</a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up"><path d="m18 15-6-6-6 6"/></svg>
+   </a>
    <main>
       <!-- Section Héro -->
       <section id="hero">
          <article>
-            <h1>La provence entre vos mains</h1>
+            <h1 id="btnMagique">La provence entre vos mains</h1>
             <p>
                Vivez la Provence authentique, entre saveurs,<br />
                art et convivialité
@@ -89,7 +109,7 @@
             d’art et d’artisanat inspirés par sa lumière et ses
             paysages.
          </p>
-         <video controls>
+         <video controls=>
             <source src="./assets/video-cuisine.webm" type="video/webm">
             <source src="./assets/video-cuisine.mp4" type="video/mp4">
          </video>
@@ -114,7 +134,7 @@
             paysages.
          </p>
          <section>
-            <img loading="lazy" width="640" height="360" src="./assets/creme.webp" alt="" />
+            <img loading="lazy" width="640" height="160" src="./assets/creme.webp" alt="" />
             <h2>Crème brûlée à la fleur d’oranger</h2>
             <p>Un classique revisité avec une touche provençale :
                notre crème brûlée associe la douceur de sa texture
@@ -125,7 +145,7 @@
             </p>
          </section>
          <section>
-            <img loading="lazy" width="640" height="360" src="./assets/daube.webp" alt="" />
+            <img loading="lazy" width="640" height="160" src="./assets/daube.webp" alt="" />
             <h2>La daube provençale</h2>
             <p>Un plat emblématique de la Provence, mijoté avec
                passion. La daube provençale marie des morceaux de bœuf
@@ -135,7 +155,7 @@
                saveurs du terroir.</p>
          </section>
          <section>
-            <img loading="lazy" width="640" height="360" src="./assets/ratatouille.webp" alt="" />
+            <img loading="lazy" width="640" height="160" src="./assets/ratatouille.webp" alt="" />
             <h2>La ratatouille maison</h2>
             <p>Un festival de légumes méditerranéens soigneusement
                préparés : courgettes, aubergines, poivrons et tomates,
@@ -287,21 +307,48 @@
          <!-- Formulaire pour réserver une table -->
          <form action="">
             <label for="prenom">Prénom :</label>
-            <input id="prenom" type="text" required autocomplete="true"/>
+            <input id="prenom" type="text" name="prenom" required autocomplete="true"/>
             <label for="nom">Nom :</label>
-            <input id="nom" type="text" required autocomplete="true"/>
+            <input id="nom" type="text" name="nom" required autocomplete="true"/>
             <label for="email">Email :</label>
-            <input id="email" type="email" required autocomplete="true"/>
+            <input id="email" type="email" name="email" required autocomplete="true"/>
             <label for="tel">Téléphone :</label>
-            <input id="tel" type="number" required autocomplete="true"/>
+            <input id="tel" type="tel" name="tel" required autocomplete="true"/>
             <label for="personne">Personne :</label>
-            <input id="personne" type="num" required />
+            <input id="personne" min="1" max="10" type="num" name="personne" required />
             <label for="date">Date :</label>
-            <input id="date" type="datetime-local" required />
+            <input id="date" type="datetime-local" name="date" required />
             <label for="message">Message :</label>
             <textarea id="message" id="" placeholder="Ecrivez votre message ici ..."></textarea>
             <input type="submit" value="Réserver" />
          </form>
+         <aside class="contact-info">
+            <h2>
+               Une question, une réservation, ou simplement envie de nous dire
+               bonjour ?
+            </h2>
+            <p>
+               Contactez-nous et laissez-nous vous accompagner dans votre
+               expérience provençale. Que ce soit par téléphone, email ou via
+               notre formulaire, nous sommes à votre écoute pour répondre à vos
+               besoins.<br/>
+               À très bientôt chez Abysse !
+            </p>
+            <ul>
+               <li>Département Informatique, IUT Aix-en-Provence</li>
+               <li>
+                  📞 Téléphone :
+                  <a href="tel:+33413946300">+33 4 13 94 63 00</a>
+               </li>
+               <li>
+                  <a
+                     target="_blank"
+                     href="https://www.google.fr/maps/place/IUT+d'Aix-Marseille+site+d'Aix-en-Provence/@43.5153598,5.4574494,1115m/data=!3m1!1e3!4m6!3m5!1s0x12c98d8e9e0b3e41:0x7640a64b13faa8f5!8m2!3d43.5134537!4d5.4511515!16s%2Fg%2F124sy3nz0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
+                     >📍 413 Av. Gaston Berger, 13100 Aix-en-Provence</a
+                  >
+               </li>
+            </ul>
+         </aside>
       </section>
    </main>
    <footer>
