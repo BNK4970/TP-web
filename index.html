@@ -12,10 +12,9 @@ Designé et développé par Cordovana Enzo & Panaiva Jérémi
 BUT Informatique première année à l'IUT d'Aix
 -->
 <head>
-   <meta charset="UTF-8" />
+   <meta charset="utf-8"/>
    <meta name="title" content="Abysse" />
    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-   <meta name="description" content="Découvrez notre restaurant provencale !" />
 
    <!-- Meta tags de base -->
    <meta name="author" content="Abysse">
@@ -64,7 +63,7 @@ BUT Informatique première année à l'IUT d'Aix
       <a id="btn-reserver" href="#Reservation">Réserver</a>
       <!-- hamburgeur -->
       <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
-         <svg class="hamburger" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+         <svg class="hamburger lucide lucide-menu" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
        </button>
    </header>
 
@@ -73,7 +72,7 @@ BUT Informatique première année à l'IUT d'Aix
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up"><path d="m18 15-6-6-6 6"/></svg>
    </a>
    <!-- liens pour aller à la section reserver -->
-   <a id="reserver" href="#Reservation">Réserver</a>
+   <a id="reserver" href="#Reservation">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up"><path d="m18 15-6-6-6 6"/></svg>
    </a>
    <main>
@@ -105,13 +104,13 @@ BUT Informatique première année à l'IUT d'Aix
          </p>
       </section>
       <section id="Galerie">
-         <h1>galerie</h2>
+         <h1>galerie</h1>
          <p>
             Découvrez l’essence de la Provence à travers des œuvres
             d’art et d’artisanat inspirés par sa lumière et ses
             paysages.
          </p>
-         <video controls=>
+         <video controls>
             <source src="./assets/video-cuisine.webm" type="video/webm">
             <source src="./assets/video-cuisine.mp4" type="video/mp4">
          </video>
@@ -286,42 +285,48 @@ BUT Informatique première année à l'IUT d'Aix
       </section>
       <section id="Horaires">
          <h1>Horaires</h1>
-         <p>Quand la Provence s'éveille, nos portes s'ouvrent pour vous.</p>
+         <p>Quand la Provence s’éveille, nos portes s’ouvrent pour vous.</p>
          <article>
-            <h2>Lundu - Mardi</h2>
-            <p>11:30 - 13:30</p>
-            <p>19:30 - 21:30</p>
+            <h2>Lundi - Mardi</h2>
+            <p>
+               11:30 - 13:30
+               <br />
+               19:30 - 21:30
+            </p>
          </article>
          <article>
-            <h2>Mercredi</h2>
+            <h2>Mercredi-Dimanche</h2>
             <p>Nous sommes fermés</p>
          </article>
          <article>
-            <h2>Jeudi - Vendredi</h2>
-            <p>11:30 - 13:30</p>
-            <p>19:30 - 21:30</p>
+            <h2>Jeudi - Samedi</h2>
+            <p>
+               11:30 - 13:30
+               <br />
+               19:30 - 21:30
+            </p>
          </article>
       </section>
       <section id="Reservation">
          <h1>Réservation</h1>
          <p>Réservez dès maintenant et laissez la Provence éveiller vos
             sens.</p>
-         <!-- Formulaire pour réserver une table -->
-         <form action="mailto:abysse.alwaysdata.net">
+         <!-- Formulaire pour réserver une table : action="mailto:abysse.alwaysdata.net"-->
+         <form >
             <label for="prenom">Prénom :</label>
-            <input id="prenom" type="text" name="prenom" required autocomplete="true"/>
+            <input id="prenom" type="text" name="prenom" required/>
             <label for="nom">Nom :</label>
-            <input id="nom" type="text" name="nom" required autocomplete="true"/>
+            <input id="nom" type="text" name="nom" required/>
             <label for="email">Email :</label>
-            <input id="email" type="email" name="email" required autocomplete="true"/>
+            <input id="email" type="email" name="email" required/>
             <label for="tel">Téléphone :</label>
-            <input id="tel" type="tel" name="tel" required autocomplete="true"/>
+            <input id="tel" type="tel" name="tel" required/>
             <label for="personne">Personne :</label>
-            <input id="personne" min="1" max="10" type="num" name="personne" required />
+            <input id="personne" min="1" max="10" type="number" name="personne" required />
             <label for="date">Date :</label>
             <input id="date" type="datetime-local" name="date" required />
             <label for="message">Message :</label>
-            <textarea id="message" id="" placeholder="Ecrivez votre message ici ..."></textarea>
+            <textarea id="message" placeholder="Ecrivez votre message ici ..."></textarea>
             <input type="submit" value="Réserver" />
          </form>
          <aside class="contact-info">

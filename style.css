@@ -499,84 +499,69 @@ h1 {
    grid-column: 1/4;
 }
 
-/* section horaires*/
 #Horaires {
-   display: -ms-grid;
-   display: grid;
-   -ms-grid-rows: auto 1em auto 1em 1fr 1em 1fr 1em 1fr;
-   grid-template-rows: auto auto 1fr 1fr 1fr;
-   gap: 1em;
-}
-
-#Horaires article {
-   border: 2px solid rgba(var(--border-clr), 1);
-   border-radius: var(--border-radius);
-   display: -ms-grid;
-   display: grid;
-   padding: .5em;
-   -ms-grid-columns: 1fr 1fr;
-   grid-template-columns: 1fr 1fr;
-   -ms-grid-rows: 1fr 1fr;
-   grid-template-rows: 1fr 1fr;
-}
-
-#Horaires article {
-   margin-top: 15px;
-}
-
-#Horaires article>*:nth-child(1) {
-   -ms-grid-row: 1;
-   -ms-grid-column: 1;
-}
-
-#Horaires article p:nth-child(odd) {
-   -ms-grid-column: 2;
-   -ms-grid-column-span: 1;
-   grid-column: 2/3;
-   -ms-grid-row: 2;
-   -ms-grid-row-span: 1;
-   grid-row: 2/3;
-}
-
-#Horaires article>*:nth-child(2) {
-   -ms-grid-row: 1;
-   -ms-grid-column: 2;
-}
-
-#Horaires article>*:nth-child(3) {
-   -ms-grid-row: 2;
-   -ms-grid-column: 1;
-}
-
-#Horaires article>*:nth-child(4) {
-   -ms-grid-row: 2;
-   -ms-grid-column: 2;
-}
-
-#Horaires article h2 {
-   font-size: 16px;
-   color: var(--text-clr);
-   text-transform: none;
-   font-weight: normal;
-   -ms-grid-row: 1;
-   -ms-grid-row-span: 2;
-   grid-row: 1/3;
-   -ms-grid-column: 1;
-   -ms-grid-column-span: 1;
-   grid-column: 1/2;
-   -ms-grid-row-align: center;
-   align-self: center;
-}
-
-#Horaires article p {
-   -ms-grid-row: 1;
-   -ms-grid-row-span: 2;
-   grid-row: 1/3;
-   -ms-grid-column: 2;
-   -ms-grid-column-span: 1;
-   grid-column: 2/3;
-}
-
+   background-color: var(--bg-clr);
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   padding: 40px 20px;
+ }
+ 
+ #Horaires h1 {
+   font-size: 60px;
+   font-family: "Rancho", serif;
+   color: var(--title-clr);
+   margin-bottom: 15px;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   width: 100vw;
+ }
+ 
+ #Horaires p {
+   width: 100%;
+   font-size: 25px;
+   font-family: "Arial", sans-serif;
+   color: var(--gris);
+   line-height: 1.6;
+   margin-bottom: 100px;
+   text-align: center;
+ }
+ 
+ #Horaires article {
+   display: flex;
+   width: 25%;
+   background-color: var(--bg-clr-secondary);
+   padding: 1em;
+   border-radius: 8px;
+   margin: 0.5em;
+   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+   height: auto;
+   border: var(--description-clr) solid 1px;
+   transition: transform 0.3s ease;
+   align-items: center;
+ }
+ 
+ #Horaires article:hover {
+   transform: scale(1.04); /* Zoom sur l'image au survol */
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Effet de shadow au survol */
+ }
+ 
+ #Horaires h2 {
+   display: flex;
+   font-size: 1.2em;
+   justify-content: flex-start;
+   width: 80%;
+ }
+ 
+ #Horaires article p {
+   font-size: 1em;
+   color: #333;
+   margin: 0;
+   display: flex;
+   justify-content: flex-end;
+ }
+ 
 /* section payment */
 #Payement {
    display: -ms-grid;
@@ -653,7 +638,6 @@ h1 {
    -webkit-column-gap: 15px;
    -moz-column-gap: 15px;
    column-gap: 15px;
-
    label,
    input,
    textarea {
@@ -1304,6 +1288,12 @@ footer {
       background-color: var(--bg-clr);
       padding: 20px;
       border-radius: var(--border-radius);
+      box-shadow:1px 4px 5px #5f5e5e96;
+    }
+
+    #Specialité section:hover{
+      transform: scale(1.1);
+      transition: all 0.5s;
     }
 
    #Specialite section > *:nth-child(1) {
@@ -1473,5 +1463,34 @@ footer {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
+   }
+
+}
+
+@media screen and (max-width: 1024px)  {
+   #Horaires {
+      flex-direction: column;
+      align-items: center;
+
+   }
+
+   #Horaires article {
+      width: 80%;
+      margin: 1em 0;
+      height: auto;
+   }
+
+   #Horaires h1 {
+      font-size: 50px;
+   }
+
+   #Horaires h3 {
+      align-items: center;
+      font-size: 1.5rem;
+   }
+
+   #Horaires p {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
    }
 }
